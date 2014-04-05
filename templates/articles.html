@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block more_css %}
+<link rel="stylesheet" type="text/css" href="{% static "css/articles.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "css/paginator.css" %}"/>
+{% endblock %}
+{% block content %}
+    <div class="articles-list-content articles-list-content_width_960">
+    {% if articles %}
+        {% for article in articles %}
+        <div class="article-list-item">
+            <div class="article-list-item__main-content">
+                <p class="article-list-item-caption">{{ article.caption }}</p>
+                <div class="article-list-item-main-content article-list-item-main-content_border-layer">
+                    <div class="article-list-item-main-content-image">
+						{% if not article.image_thumbnail %}
+						<img class="article-list-item-main-content-image__image-thumb" src="/static/images/temporary_anavailable_thumb.png"/>
+			{% else %}
+			<img class="article-list-item-main-content-image__image-thumb" src="{{ article.image_thumbnail }}"/>
+			{% endif %}
+                    </div>
+                    <p class="article-list-item-main-content-text article-list-item-main-content-text_font-style_italic">
+                    &nbsp;&nbsp;{{ article.shot_text | safe }}
+                    <a href="{{ article.get_absolute_url }}" class="articles-list-item-main-content__read_more_link">С‡РёС‚Р°С‚СЊ РґР°Р»СЊС€Рµ</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% elif not articles and not article == None %}
+        <div class="article-list-item" itemscope itemtype="http://schema.org/Article">
+            <div class="article-list-item__main-content">
+                <p class="article-list-item-caption" itemprop="name">{{ article.caption }}</p>
+                <div class="article-list-item-main-content article-list-item-main-content_border-layer">
+                    <div class="article-list-item-main-content-image">
+			{% if not article.image %}
+                        <img class=" article-list-item-main-content-image__image" src="/static/images/temporary_anavailable.png" itemprop="image"/>
+			{% else %}
+			<img class="article-list-item-main-content-image__image" src="{{ article.image }}" itemprop="image"/>
+			{% endif %}
+                    </div>
+                    <p class="article-list-item-main-content-text" itemprop="text">
+                    &nbsp;&nbsp;{{ article.text | safe }}
+                    </p>
+					<div class="article-author" style="float: right;" itemprop="author" itemscope itemtype="http://schema.org/Person">
+						<a itemprop="url" href="/contacts/" class="article-author-link" style="text-decoration: none; color: #909090;">
+							<span itemprop="name" class="article-author-text" style="display: inline-block;">Ilya Ruban</span>
+						</a>
+					</div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% include "paginator_block.html" %}
+    </div>
+{% endblock %}

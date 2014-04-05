@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block meta-description %}{{ description }}{% endblock %}
+{% block meta-keywords %}{{ keywords }}{% endblock %}
+{% load static from staticfiles %}
+{% block more_css %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/articles.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/paginator.css" %}"/>
+{% endblock %}
+{% block content %}
+    <div class="content-wrapper">
+        {% for item in items %}
+	{% if item.video == None %}
+	<h4> WTF </h4>
+	{% endif %}
+        <div itemscope itemtype="http://schema.org/ImageObject" class="portfolio__portfolio-article" id="{{ item.pk }}">
+	    <div class="portfolio-article__image">
+		{{ item.video|safe }}
+	    </div>
+            <meta itemprop="caption" content="{{ item.alternateName }}"/>
+            <meta itemprop="publisher" content="/contacts/"/>
+        </div>
+        {% endfor %}
+        {% include "paginator_block.html" %}
+    </div>
+{% endblock %}
