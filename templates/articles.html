@@ -18,12 +18,13 @@
 						{% if not article.image_thumbnail %}
 						<img class="article-list-item-main-content-image__image-thumb" src="/static/images/temporary_anavailable_thumb.png"/>
 			{% else %}
-			<img class="article-list-item-main-content-image__image-thumb" src="{{ article.image_thumbnail }}"/>
+			{# <img class="article-list-item-main-content-image__image-thumb" src="{{ article.image_thumbnail }}"/> #}
+			<img class="article-list-item-main-content-image__image-thumb" src="http://fotki.yandex.ru/calendar/users/katti-ta/view/677758.jpg"/>
 			{% endif %}
                     </div>
                     <p class="article-list-item-main-content-text article-list-item-main-content-text_font-style_italic">
                     &nbsp;&nbsp;{{ article.shot_text | safe }}
-                    <a href="{{ article.get_absolute_url }}" class="articles-list-item-main-content__read_more_link">С‡РёС‚Р°С‚СЊ РґР°Р»СЊС€Рµ</a>
+                    <a href="{{ article.get_absolute_url }}" class="articles-list-item-main-content__read_more_link">читать дальше</a>
                     </p>
                 </div>
             </div>

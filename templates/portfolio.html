@@ -11,7 +11,12 @@
     <div class="content-wrapper">
         {% for item in items %}
         <div itemscope itemtype="http://schema.org/ImageObject" class="portfolio__portfolio-article">
+	    {# Yandex fotki changes #}
+	    {% if item.fotki %}
+	    <img itemprop="image" data-src="{{ item.fotki }}" class="portfolio-article__image"/>
+	    {% else %}
             <img itemprop="image"  data-src="/{{ item.image }}" class="portfolio-article__image"/>
+	    {% endif %}
 			<!-- Test videos -->
 			{% if item.video %}
 			{{ item.video|safe }}

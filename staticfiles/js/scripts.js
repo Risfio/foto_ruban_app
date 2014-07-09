@@ -59,7 +59,7 @@
         }
     }
     this.onload = function(){
-        popupTrigger.call(this, 'js-popup-info', 'js-hidden-info');
+        //popupTrigger.call(this, 'js-popup-info', 'js-hidden-info');
         popupTrigger.call(this, 'js-popup-portfolio', 'js-hidden-portfolio');
     }
 }).call(this)
