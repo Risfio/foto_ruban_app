@@ -6,9 +6,14 @@ from .models import Portfolio
 from .models import Articles
 from .models import Blog
 from .models import BlogImage
+from .models import BlogImageUpdated
 from .models import PortfolioVideo
 
 # Register your models here.
+
+# Trying yandex fotki
+class BlogImageUpdAdmin(admin.ModelAdmin):
+	model = BlogImageUpdated
 
 
 class BlogImageInline(admin.TabularInline):
@@ -34,6 +39,9 @@ admin.site.register(Blog, BlogAdmin)
 admin.site.register(Portfolio, PortfolioAdmin)
 admin.site.register(Articles)
 admin.site.register(PortfolioVideo, PortfolioVideoAdmin)
+
+# Addin yandex fotki link
+admin.site.register(BlogImageUpdated, BlogImageUpdAdmin)
 
 
 # testings

@@ -96,10 +96,13 @@ class Blog(models.Model):
 class BlogImage(models.Model):
     post = models.ForeignKey(Blog)
     image = models.ImageField(upload_to='media/', verbose_name=_(u'Image'),
-                              default='images/temporary_anavailable.png')
+                              default='images/temporary_anavailable.png',
+                              blank=True, null=True)
     text = models.TextField(max_length=2000, verbose_name=_(u'Text for image'), blank=True, null=True)
-    # Yandex fotki functional
-    # fotki = models.CharField(max_length=256)
+
+
+class BlogImageUpdated(BlogImage):
+	fotki = models.CharField(max_length=512, blank=True, null=True)
 
 
 # end of testings
