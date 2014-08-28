@@ -1,3 +1,44 @@
+/* SlidesJs styles */
+.slidesjs-previous {
+    /*
+    font-size: 2em;
+    font-weight: 900;
+    text-decoration: none;
+    color: #ff3333;
+    float: left;
+    padding-right: 1em;
+    */
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: url(../images/arrow_back.png) no-repeat;
+    background-size: cover;
+}
+.slidesjs-next {
+    /*
+    font-size: 2em;
+    font-weight: 900;
+    text-decoration: none;
+    color: #ff3333;
+    float: left;
+    padding-left: 1em;
+    */
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: url(../images/arrow_forward.png) no-repeat;
+    background-size: cover;
+}
+.slidesjs-stop {
+    display: none;
+}
+.slidesjs-play {
+    display: none;
+}
+.slidesjs-pagination-item {
+    float: right;
+}
+/* End SlidesJs styles */
 div, p {
 	padding: 0;
 	margin: 0;
