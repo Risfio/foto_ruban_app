@@ -1,33 +1,21 @@
 /* SlidesJs styles */
 .slidesjs-previous {
-    /*
-    font-size: 2em;
-    font-weight: 900;
-    text-decoration: none;
-    color: #ff3333;
-    float: left;
-    padding-right: 1em;
-    */
-    display: inline-block;
+    /* display: inline-block;*/
+    display: none;
     width: 2em;
     height: 2em;
     background: url(../images/arrow_back.png) no-repeat;
     background-size: cover;
+    float: left;
 }
 .slidesjs-next {
-    /*
-    font-size: 2em;
-    font-weight: 900;
-    text-decoration: none;
-    color: #ff3333;
-    float: left;
-    padding-left: 1em;
-    */
-    display: inline-block;
+    /* display: inline-block;*/
+    display: none;
     width: 2em;
     height: 2em;
     background: url(../images/arrow_forward.png) no-repeat;
     background-size: cover;
+    float: left;
 }
 .slidesjs-stop {
     display: none;
@@ -35,9 +23,24 @@
 .slidesjs-play {
     display: none;
 }
-.slidesjs-pagination-item {
+.slidesjs-pagination {
+    display : none;
     float: right;
+    list-style: block;
 }
+.slidesjs-pagination-item {
+    float: left;
+}
+.slidesjs-pagination-item > a {
+    width: 2em;
+    height: 2em;
+    background: url(../images/slidesjs_point.png) no-repeat;
+    background-size: cover;
+    display: inline-block;
+    text-decoration: none;
+    color: #797979;
+}
+
 /* End SlidesJs styles */
 div, p {
 	padding: 0;
@@ -366,12 +369,18 @@ a:visited {
 	width: 900px;
 	margin: 0 auto;
 }
+.blog__blog-article {
+    width: 100%;
+}
+.blog-article {
+    width: 980px;
+    margin: 0 auto;
+}
 .blog-article_border_bottom {
 	border-bottom: 2px solid #909090;
 	overflow: hidden;
 }
 .blog-article__blog-article-date {
-	width: 900px;
 	margin: 0 auto;
 }
 .blog-article-caption {
@@ -524,6 +533,9 @@ a:visited {
 	}
 	.contact {
 		padding: 0;
+	}
+	.blog-article {
+	    width: 100%;
 	}
 	.blog-article__blog-article-description {
 		width: 100%;
