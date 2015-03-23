@@ -1,47 +1,3 @@
-/* SlidesJs styles */
-.slidesjs-previous {
-    /* display: inline-block;*/
-    display: none;
-    width: 2em;
-    height: 2em;
-    background: url(../images/arrow_back.png) no-repeat;
-    background-size: cover;
-    float: left;
-}
-.slidesjs-next {
-    /* display: inline-block;*/
-    display: none;
-    width: 2em;
-    height: 2em;
-    background: url(../images/arrow_forward.png) no-repeat;
-    background-size: cover;
-    float: left;
-}
-.slidesjs-stop {
-    display: none;
-}
-.slidesjs-play {
-    display: none;
-}
-.slidesjs-pagination {
-    display : none;
-    float: right;
-    list-style: block;
-}
-.slidesjs-pagination-item {
-    float: left;
-}
-.slidesjs-pagination-item > a {
-    width: 2em;
-    height: 2em;
-    background: url(../images/slidesjs_point.png) no-repeat;
-    background-size: cover;
-    display: inline-block;
-    text-decoration: none;
-    color: #797979;
-}
-
-/* End SlidesJs styles */
 div, p {
 	padding: 0;
 	margin: 0;
@@ -147,10 +103,12 @@ a:visited {
 	/* use this if wanna desc and name in one line */
 	/*display: inline-block;*/
 	display: block;
-	height: 3.5em;
+	/* height: 3.5em; */
 	letter-spacing: 5px;
 }
-
+.logo__logo-image {
+    width: 25%;
+}
 .logo .logo-text {
 	color:#707070;
     font-size: 3.5em;
@@ -192,7 +150,7 @@ a:visited {
 .navigation__item-container {
 	float: left;
 	display: inline;
-	width: 20%;
+	width: 25%;
 	/*
 	-moz-box-shadow: inset 0 0 1px 1px #eee;
 	-webkit-box-shadow: inset 0 0 1px 1px #eee;
@@ -369,18 +327,12 @@ a:visited {
 	width: 900px;
 	margin: 0 auto;
 }
-.blog__blog-article {
-    width: 100%;
-}
-.blog-article {
-    width: 980px;
-    margin: 0 auto;
-}
 .blog-article_border_bottom {
 	border-bottom: 2px solid #909090;
 	overflow: hidden;
 }
 .blog-article__blog-article-date {
+	width: 900px;
 	margin: 0 auto;
 }
 .blog-article-caption {
@@ -534,9 +486,6 @@ a:visited {
 	.contact {
 		padding: 0;
 	}
-	.blog-article {
-	    width: 100%;
-	}
 	.blog-article__blog-article-description {
 		width: 100%;
 	}
@@ -564,6 +513,9 @@ a:visited {
 	}
 	.blog-article__blog-article-date {
 		width: 100%;
+	}
+	.logo__logo-image {
+	    width: 100%;
 	}
 }
 @media only screen and (max-width: 540px) {

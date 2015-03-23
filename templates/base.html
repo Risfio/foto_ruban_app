@@ -4,6 +4,7 @@
 <head>
 	<title>{% block title %}{% endblock %}</title>
 	<meta charset="utf-8">
+	<link rel="shorcut icon" type="image/x-icon" href="http://foto-ruban.ru/static/images/favicon.png">
 	<meta name="yandex-verification" content="670af28b42ed5280"/> 
 	<meta name="google-site-verification" content="EiG5EJzhcDHpe2_rRbH-7_onzS1PeKlFRGL6h9vG8bM" />
 	<meta name="viewport" content="width=device-width">
@@ -14,7 +15,6 @@
     {% block more_css %}
     {% endblock %}
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script type="text/javascript" src="{% static "js/jquery.slides.min.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/jquery.lazyloadxt.min.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/imagesloaded.pkgd.js" %}"></script>
 	<script type="text/javascript" src="{% static "js/masonry.pkgd.min.js" %}"></script>
@@ -105,12 +105,32 @@
                                 </a>
                             </div>
                         </div>
+                        <!--
                         <div class="navigation__item-container css_information">
                             <div class="navigation-item  navigation-item_border-rigth">
-                                <a class="item-link" href="/about-me/" itempprop="url">
-                                    <p class="item-link item-text" itemprop="name">Обо мне</p>
+                                <a class="item-link" href="#">
+                                    <p class="item-link item-text js-popup-info">Полезная&nbsp;информация</p>
                                 </a>
                             </div>
+                            -->
+                            <!-- Manual element inserting! Non pybem!!! -->
+                            <!--
+                            <div class="navigation__information-container js-hidden-info">
+                                <div class="portfolio-popup">
+                                    <div class="portfolio-popup__popup-item">
+                                        <a href="/about-me/" class="popup-item__item-link" itemprop="url">
+                                            <p class="popup-item__item-text" itemprop="name">Обо мне</p>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-popup__popup-item">
+                                        <a href="/articles/" class="popup-item__item-link" itemprop="url">
+                                            <p class="popup-item__item-text" itemprop="name">Полезная информация</p>
+                                        </a>
+                                    </div>
+								</div>
+                            </div>
+                            -->
+                            <!-- End of manual inserting -->
                         </div>
                         <div class="navigation__item-container">
                             <div class="navigation-item">
@@ -152,9 +172,9 @@
 					</div>
 					<div class="contacts__contact-container">
 						<div class="contact">
-							<a href="http://vk.com/foto_ruban" class="contact-link">
+							<a href="https://vk.com/id281922907" class="contact-link">
 								<span class="contact-icon contact-icon_vk"></span>
-								<span class="contact-icon-text">vk.ru/foto_ruban</span>
+								<span class="contact-icon-text">foto-ruban</span>
 							</a>
 						</div>
 					</div>

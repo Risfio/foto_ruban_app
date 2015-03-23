@@ -17,7 +17,7 @@ from .models import TestNewFotoApp
 
 
 def index(request):
-    title = u'Илья Рубан. свадебный фотограф'
+    title = u'Свадебный фотограф в Москве.Рубан Илья.'
     return render(request, 'index.html', {'title': title})
     #from django.http import HttpResponse
     #return HttpResponse('helllo')
