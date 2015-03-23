@@ -82,7 +82,8 @@ def portfolio(request, razdel):
     elif razdel is None:
         items, num_pages = get_page(request.GET, 2, Portfolio.objects.filter(razdel=1))
         pages = [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, 1)} for num in num_pages]
-    return render(request, template_file, {'items': items,
+    #return render(request, template_file, {'items': items,
+    return render(request, template_file, {'items': sorted(items, key=lambda x: x.index),
 					      'keywords': get_title(razdel, keywords_choices),
 					      'description': get_title(razdel, description_choices),
                                               'paginator': pages,

@@ -23,6 +23,7 @@ class Portfolio(models.Model):
     outer_image = models.CharField(max_length=1024, blank=True, verbose_name=u'Ссылка на изображение, если картинка на \
                                                                              внешнем ресурсе - типа яндекс фотки')
     alternateName = models.CharField(max_length=256, verbose_name= u'Содержимое тега альт! Надо поменять на schema.org аттрибут')
+    index = models.PositiveIntegerField(unique=True, default=0)
     #video = models.CharField(max_length=1024, verbose_name = u'Видео', null=True, blank=True)
 
     def __str__(self):
