@@ -274,6 +274,14 @@ a:visited {
 	background:  url(../images/vk_icon.png) no-repeat;
 	background-size: cover;
 }
+.contact-icon_myweb {
+    background: url(http://www.mywed.ru/files/logotypes/logo_mywed_gorizontal_black.png) no-repeat;
+    background-size: cover;
+}
+.container_instgrm {
+    background: url() no-repeat;
+    backeground-size: cover;
+}
 
 /* Navigation links */
 .navigation-link-top {
