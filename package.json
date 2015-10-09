@@ -1,0 +1,25 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Frontend for foto-ruban.ru site",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.5.3"
+  },
+  "devDependencies": {
+    "bower": "^1.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risfio/foto_ruban_app.git"
+  },
+  "author": "Risfio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/risfio/foto_ruban_app/issues"
+  },
+  "homepage": "https://github.com/risfio/foto_ruban_app#readme"
+}
