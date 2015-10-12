@@ -9,199 +9,48 @@
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="{% block meta-description %}{% endblock %}"/>
 	<meta name="keywords" content="{% block meta-keywords %}{% endblock %}"/>
-	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/foundation.min.css">
     {% block more_css %}
     {% endblock %}
     <script src="/static/js/vendor/modernizr.js" type="text/javascript"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/js/vendor/jquery.js"></script>
 	<script type="text/javascript" src="/static/js/foundation.min.js"></script>
-	<script type="text/javascript" src="/static/js/jquery.lazyloadxt.min.js"></script>
-	<script type="text/javascript" src="/static/js/imagesloaded.pkgd.js"></script>
-	<script type="text/javascript" src="/static/js/masonry.pkgd.min.js"></script>
-	<script type="text/javascript" src="/static/js/utils.js"></script>
-	<script type="text/javascript" src="/static/js/scripts.js"></script>
+	<script type="text/javascript" src="/static/js/foundation/foundation.magellan.js"></script>
 </head>
-<body class="page" itemscope itemtype="http://schema.org/WebPage">
-	<div class="page page__header-line">
-		<div class="page header">
-			<div class="logo logo__logo-container">
-				<div class="page logo">
-					<div class="logo logo__logo-name" itemprop="author" itemscope itemtype="http://schema.org/Person">
-						<a href="/" style="text-decoration: none;">
-							<p class="logo logo-text" itemprop="name">
-								Илья&nbsp;Рубан
-							</p>
-							<meta itemprop="url" content="http://foto-ruban.ru/contacts/"/>
-						</a>
-					</div>
-					<div class="logo logo__logo-desc">
-						<p class="logo desc-text">фотограф</p>
-					</div>
-				</div>
-			</div>
-			<div class="navigation__navigation-container">
-                <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <div class="navigation">
-                        <div class="navigation__item-container">
-                            <div class="menu navigation-item_border-rigth">
-                                <a class="menu-link" href="/blog/" itemprop="url">
-                                    <p class="menu-link menu-text" itemprop="name">Блог</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="navigation__item-container css_portfolio">
-                            <div class="navigation-item navigation-item_border-rigth">
-    {#							<a class="item-link" href="#">#}
-    {#								<p class="item-link item-text" onmouseover="showMenu('.navigation__portfolio-container');" onclick="showhideonclick('.navigation__portfolio-container');">Портфолио</p>#}
-    {#							</a>#}
-                                <a class="item-link" href="#" itemprop="url">
-                                    <p class="item-link item-text js-popup-portfolio" itemprop="name">Портфолио</p>
-                                </a>
-                            </div>
-                            <!-- Manual element inserting! Non pybem!!! -->
-                            <div class="navigation__portfolio-container js-hidden-portfolio">
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/svadbi/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">свадебная фотография</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/lovestory/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Love Story</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/portreit/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Портрет</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/semeynie/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Детская и семейная фотография</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/video/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Видео</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of manual inserting -->
-                        </div>
-                        <div class="navigation__item-container">
-                            <div class="menu navigation-item_border-rigth">
-                                <a class="menu-link" href="/prices/" itemprop="url">
-                                    <p class="menu-link menu-text" itemprop="name">Услуги и цены</p>
-                                </a>
-                            </div>
-                        </div>
-                        <!--
-                        <div class="navigation__item-container css_information">
-                            <div class="navigation-item  navigation-item_border-rigth">
-                                <a class="item-link" href="#">
-                                    <p class="item-link item-text js-popup-info">Полезная&nbsp;информация</p>
-                                </a>
-                            </div>
-                            -->
-                            <!-- Manual element inserting! Non pybem!!! -->
-                            <!--
-                            <div class="navigation__information-container js-hidden-info">
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/about-me/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Обо мне</p>
-                                        </a>
-                                    </div>
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/articles/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Полезная информация</p>
-                                        </a>
-                                    </div>
-								</div>
-                            </div>
-                            -->
-                            <!-- End of manual inserting -->
-                        </div>
-                        <div class="navigation__item-container">
-                            <div class="navigation-item">
-                                <a class="item-link" href="/contacts/" itemprop="url">
-                                    <p class="item-link item-text" itemprop="name">Контакты</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+<body class="antialised hide-extras">
+	<div class="off-canvas-wrap" data-offcanvas="">
+		<div class="inner-wrap">
+			<nav  class="top-bar" data-topbar role="navigation">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="/">Рубан Илья&nbsp;<small>фотограф</small></a></h1>
+					</li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
+				<section class="top-bar-section">
+					<ul class="right">
+						<li><a href="#">контакты</a></li>
+					</ul>
+				</section>
+			</nav>
+			<div class="magellan-container" data-magellan-expedition="fixed">
+				<dl class="sub-nav">
+					<dd  data-magellan-arrival="arrival">
+						<a href="#arrival">Свадьбы</a>
+					</dd>
+					<dd  data-magellan-arrival="">
+						<a href="#arrival">Портреты</a>
+					</dd>
+					<dd  data-magellan-arrival="arrival">
+						<a href="#arrival">Детская фотография</a>
+					</dd>
+				</dl>
 			</div>
 		</div>
 	</div>
-	<div class="page page__content-line" itemprope="mainContentOfPage">
-        {% block content %}
-        {% endblock %}
-		<a href="#" class="navigation-link-top"></a>
-		<a href="/" class="navigation-link-home navigation-link-home_margin-bot"></a>
-	</div>
-	<div class="page page__footer-line">
-		<div class="footer">
-			<div class="footer__contacts-container">
-				<div class="contacts">
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="tel: +7 925 823-84-40" class="contact-link">
-								<span class="contact-icon contact-icon_phone"></span>
-								<span class="contact-icon-text">+7&nbsp;925&nbsp;823-84-40</span>
-							</a>
-						</div>
-					</div>
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="http://instagram.com/foto_ruban/" class="contact-link">
-								<span class="contact-icon contact-icon_instgrm"></span>
-								<span class="contact-icon-text"></span>
-							</a>
-						</div>
-					</div>
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="mywed.ru" class="contact-link">
-								<span class="contact-icon contact-icon_mywed"></span>
-								<span class="contact-icon-text"></span>
-							</a>
-						</div>
-					</div>
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="http://facebook.com/people/Илья-Рубан/100009428172184" class="contact-link">
-								<span class="contact-icon contact-icon_fb"></span>
-								<span class="contact-icon-text"></span>
-							</a>
-						</div>
-					</div>
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="https://vk.com/id281922907" class="contact-link">
-								<span class="contact-icon contact-icon_vk"></span>
-								<span class="contact-icon-text"></span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-	{% block bottom-scripts %}{% endblock %}
+	<script>
+		$(document).foundation();
 	</script>
 </body>
 </html>
