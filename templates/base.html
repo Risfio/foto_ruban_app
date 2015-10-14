@@ -9,7 +9,9 @@
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="{% block meta-description %}{% endblock %}"/>
 	<meta name="keywords" content="{% block meta-keywords %}{% endblock %}"/>
-	<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/app.min.css">
+	<!-- Development mode. My styles file -->
+	<link rel="stylesheet" type="text/css" href="/static/css/my-styles.css">
     {% block more_css %}
     {% endblock %}
     <script src="/static/js/vendor/modernizr.js" type="text/javascript"></script>
@@ -43,6 +45,10 @@
 			</div>
 			<h3 data-magellan-destination="arrival">Here Arrival</h3>
 			<a name="arrival"></a>
+			<section class="scroll-container" role="main">
+			{% block content %}
+			{% endblock %}
+			</section>
 		</div>
 	</div>
 	<script>
