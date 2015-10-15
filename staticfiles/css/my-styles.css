@@ -4,3 +4,16 @@
 .index-block_padding_top {
 	padding-top: 0.9375rem;
 }
+
+.footer{
+}
+.footer_margin_top {
+	margin: 1rem 0 0 0;
+}
+.footer_padding_aside {
+	padding: 24px 0 10px;
+
+}
+.footer_background_color {
+	background: #333 none repeat scroll 0% 0%;
+}
