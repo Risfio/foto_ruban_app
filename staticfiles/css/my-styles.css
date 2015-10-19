@@ -17,3 +17,32 @@
 .footer_background_color {
 	background: #333 none repeat scroll 0% 0%;
 }
+.footer-links {
+	margin: 0;
+	display: inline-block;
+	padding-bottom: 0;
+}
+.footer-links__list-item {
+	float: left;
+	display: block;
+	margin-left: 3px;
+}
+.footer-links_list-item_font {
+	font-size: 0.75rem;
+	font-family: inherit;
+}
+.footer-links__list-item_text-transform_uppercase {
+	text-transform: uppercase;
+}
+.footer-links-link {
+	color: #666666;
+	line-height: inherit;
+	font-weight: 700;
+	text-decoration: none;
+}
+.footer-links-link_hover:hover {
+	color: #999999;
+}
+.footer-links-link_focus:focus {
+	color: #999999;
+}
