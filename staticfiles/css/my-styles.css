@@ -8,7 +8,7 @@
 .footer{
 }
 .footer_margin_top {
-	margin: 1rem 0 0 0;
+	margin: 0px;
 }
 .footer_padding_aside {
 	padding: 24px 0 10px;
@@ -45,4 +45,24 @@
 }
 .footer-links-link_focus:focus {
 	color: #999999;
+}
+.site-profile {
+
+}
+.site-profile_background {
+	background: #666666;
+}
+.site-profile_padding-aside {
+	padding: 24px 0 10px;
+}
+.site-profile_margin-top_1rem {
+	margin-top: 1rem;
+}
+.gallery-links {
+}
+.gallery-links_border {
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.gallery-links_padding-left_50px {
+	padding-left: 50px;
 }
