@@ -60,9 +60,55 @@
 }
 .gallery-links {
 }
+.gallery-links_height {
+	min-height: 220px;
+	height: auto;
+}
 .gallery-links_border {
 	border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 .gallery-links_padding-left_50px {
 	padding-left: 50px;
+}
+.gallery-links-list {
+	list-style: none;
+}
+.gallery-links-list_margin_0 {
+	margin: 0;
+}
+.gallery-links-list_padding_0 {
+	padding: 0;
+}
+.gallery-links-list__li {
+	padding-bottom: 9px !important;
+	line-height: 1.25em;
+}
+.gallery-links-list__li_font {
+	font-style: inherit;
+	font-size: inherit;
+}
+.gallery-links-list-link {
+	text-decoration: none;
+}
+.gallery-links-list-link_hover:hover {
+	color: #999999;
+}
+.gallery-links-list-link_focus:focus {
+	color: #999999;
+}
+.gallery-links-list-link_font {
+	color: inherit;
+}
+.extended-contacts {
+	text-align: center;
+}
+.extended-contacts_height {
+	min-height: 220px;
+	height: auto;
+}
+.extended-contacts_padding_left {
+	padding-left: 50px;
+}
+.extended-contacts_border {
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
