@@ -3121,7 +3121,9 @@ meta.foundation-mq-topbar {
   padding: 0px;
   z-index: 50; }
   [data-magellan-expedition] .sub-nav, [data-magellan-expedition-clone] .sub-nav {
-    margin-bottom: 0; }
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0px!important; }
     [data-magellan-expedition] .sub-nav dd, [data-magellan-expedition-clone] .sub-nav dd {
       margin-bottom: 0; }
     [data-magellan-expedition] .sub-nav a, [data-magellan-expedition-clone] .sub-nav a {
