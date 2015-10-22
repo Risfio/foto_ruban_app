@@ -31,6 +31,19 @@
 					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 				</ul>
 				<section class="top-bar-section hide-for-small">
+					<ul class="center">
+					<li>
+						<!-- Magellan container start -->
+						<div class="magellan-container" data-options="fixed_top:0;destination_threshold:120;threshold:61;" data-magellan-expedition="fixed">
+							<dl class="sub-nav">
+								<dd  data-magellan-arrival="arrival">
+									<a href="#arrival">Свадьбы</a>
+								</dd>
+							</dl>
+						</div>
+						<!-- Magellan container end -->
+					</li>
+					</ul>
 					<ul class="right">
 						<li><a href="#">Услуги и цены</a></li>
 						<li><a href="#">контакты</a></li>
@@ -47,14 +60,7 @@
 					</ul>
 				</section>
 			</nav>
-			<div class="magellan-container" data-magellan-expedition="fixed">
-				<dl class="sub-nav">
-					<dd  data-magellan-arrival="arrival">
-						<a href="#arrival">Свадьбы</a>
-					</dd>
-				</dl>
-			</div>
-			<h3 data-magellan-destination="arrival">Here Arrival</h3>
+			<h3 data-magellan-destination="arrival">&nbsp;</h3>
 			<a name="arrival"></a>
 			<section class="scroll-container" role="main">
 				{% block content %}
