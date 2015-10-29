@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta charset="utf-8">
+	<link rel="shorcut icon" type="image/x-icon" href="http://foto-ruban.ru/static/images/favicon.png">
+	<meta name="yandex-verification" content="670af28b42ed5280"/> 
+	<meta name="google-site-verification" content="EiG5EJzhcDHpe2_rRbH-7_onzS1PeKlFRGL6h9vG8bM" />
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="{% block meta-description %}{% endblock %}"/>
+	<meta name="keywords" content="{% block meta-keywords %}{% endblock %}"/>
+	<!-- This app.min.css file - will be minified and concated version of app.css and my-styles.css -->
+	<!-- <link rel="stylesheet" type="text/css" href="/static/css/app.min.css"> -->
+	<!-- Development mode. My styles file -->
+	<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/my-styles.css">
+	{% block more_css %}
+	{% endblock %}
+	<script src="/static/js/vendor/modernizr.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/static/js/vendor/jquery.js"></script>
+	<script type="text/javascript" src="/static/js/foundation.min.js"></script>
+	<script type="text/javascript" src="/static/js/app.magellan.js"></script>
+</head>
+<body class="antialised hide-extras">
+	<div class="off-canvas-wrap" data-offcanvas="">
+		<div class="inner-wrap">
+			<nav  class="top-bar" data-topbar role="navigation">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="/">Рубан Илья&nbsp;<small>фотограф</small></a></h1>
+					</li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
+				<section class="top-bar-section hide-for-small">
+					<ul class="center">
+					<li class="hide-for-medium">
+						<!-- Magellan container start -->
+						<div class="magellan-container" data-options="fixed_top:0;destination_threshold:120;threshold:61;" data-magellan-expedition="fixed">
+							<dl class="sub-nav">
+								<dd  data-magellan-arrival="arrival">
+									<a href="#arrival">Блог</a>
+								</dd>
+								<dd  data-magellan-arrival="arrival">
+									<a href="#arrival">Свадьбы</a>
+								</dd>
+								<dd  data-magellan-arrival="arrival">
+									<a href="#arrival">Love Story</a>
+								</dd>
+								<dd  data-magellan-arrival="arrival">
+									<a href="#arrival">Детская фотография</a>
+								</dd>
+								<dd  data-magellan-arrival="arrival">
+									<a href="#arrival">Портреты</a>
+								</dd>
+								<dd  data-magellan-arrival="arrival">
+									<a href="#arrival">Видео</a>
+								</dd>
+							</dl>
+						</div>
+						<!-- Magellan container end -->
+					</li>
+					</ul>
+					<ul class="right">
+						<li class="hide-for-large hide-for-xlarge">
+							<a href="#">Блог</a>
+						</li>
+						<li class="hide-for-large hide-for-xlarge has-dropdown">
+							<a href="#">Портфолио</a>
+							<ul class="dropdown">
+								<li>
+									<a href="#">Свадьбы</a>
+								</li>
+								<li>
+									<a href="#">Love Story</a>
+								</li>
+								<li>
+									<a href="#">Портреты</a>
+								</li>
+								<li>
+									<a href="#">Детская фотография</a>
+								</li>
+								<li>
+									<a href="#">Видео</a>
+								</li>				
+							</ul>
+						</li>
+						<li><a href="#">Услуги и цены</a></li>
+						<li><a href="#">контакты</a></li>
+					</ul>
+				</section>
+				<section class="top-bar-section hide-for-xlarge hide-for-large hide-for-medium">
+					<ul>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Услуги и цены</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Свадьбы</a></li>
+						<li><a href="#">Портреты</a></li>
+						<li><a href="#">Детская фотография</a></li>
+					</ul>
+				</section>
+			</nav>
+			<h3 data-magellan-destination="arrival">&nbsp;</h3>
+			<a name="arrival"></a>
+			<section class="scroll-container" role="main">
+				{% block content %}
+				{% endblock %}
+				<div class="site-profile site-profile_background site-profile_padding-aside site-profile_margin-top_1rem">
+					<div class="row">
+						<div class="medium-4 columns">
+							<div class="hide-for-small">
+								<h5 class="header-5">Обо мне</h5>
+								<p>Я свадебный фотограф.Имею значительный опыт в фотографии и съемке различных мероприятий.</p>
+							</div>
+						</div>
+						<div class="medium-8 columns">
+							<div class="row collapse">
+								<div class="medium-6 columns">
+									<div class="gallery-links gallery-links_height gallery-links_border gallery-links_padding-left_50px">
+										<h5 class="header-5">Галлерея:</h5>
+										<ul class="gallery-links-list gallery-links-list_margin_0 gallery-links-list_padding_0">
+											<li class="gallery-links-list__li gallery-links-list__li_font">
+												<a href="#" class="gallery-links-list-link gallery-links-list-link_font gallery-links-list-link_hover gallery-links-list-link_focus">свадьбы</a>
+											</li>
+											<li class="gallery-links-list__li gallery-links-list__li_font">
+												<a href="#" class="gallery-links-list-link gallery-links-list-link_font gallery-links-list-link_hover gallery-links-list-link_focus">портреты</a>
+											</li>
+											<li class="gallery-links-list__li gallery-links-list__li_font">
+												<a href="#" class="gallery-links-list-link gallery-links-list-link_font gallery-links-list-link_hover gallery-links-list-link_focus">детская фотография</a>
+											</li>
+											<li class="gallery-links-list__li gallery-links-list__li_font">
+												<a href="#" class="gallery-links-list-link gallery-links-list-link_font gallery-links-list-link_hover gallery-links-list-link_focus">love story</a>
+											</li>
+											<li class="gallery-links-list__li gallery-links-list__li_font">
+												<a href="#" class="gallery-links-list-link gallery-links-list-link_font gallery-links-list-link_hover gallery-links-list-link_focus">видео</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-6 columns">
+									<div class="extended-contacts extended-contacts_height extended-contacts_padding_left extended-contacts_border">
+										<!-- Test element below -->
+										<h5 class="header-5">Есть вопросы?</h5>
+										<p> Вы можете связаться с нами:</p>
+										<a href="" style="text-decoration:none; color:inherit;"><p style=" font-style:italic; font-weight: 700;">instagram.com/MyProfile</p></a>
+										<p>или</p>
+										<a href="" style="text-decoration:none; color: inherit;"><p style="font-style:italic; font-weight: 700;">vk.com/VKpage</p></a>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer footer_padding_aside footer_margin_top footer_background_color">
+					<div class="row">
+						<div class="medium-4 medium-4 push-8 columns">
+							<!-- test element -->
+							<span style="display: block; width: 50px; height: 50px; background: url(/static/images/ing-icon-try.png) no-repeat;background-size:cover;" >Some content here</span>
+						</div>
+						<div class="medium-8 medium-8 pull-4 columns">
+							<a href="#" class="footer-logo-img"></a>
+							<ul class="footer-links">
+								<li class="footer-links__list-item footer-links__list-item_text-transform_uppercase footer-links_list-item_font">
+									<a class="footer-links-link footer-links-link_hover footer-links-link_focus" href="">блог</a>
+								</li>
+								<li class="footer-links__list-item footer-links__list-item_text-transform_uppercase footer-links_list-item_font">
+									<a class="footer-links-link footer-links-link_hover footer-links-link_focus" href="">услуги&nbsp;и&nbsp;цены</a>
+								</li>
+								<li class="footer-links__list-item footer-links__list-item_text-transform_uppercase footer-links_list-item_font">
+									<a class="footer-links-link footer-links-link_hover footer-links-link_focus" href="">контакты</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script>
+		$(document).foundation();
+	</script>
+	</body>
+	</html>
