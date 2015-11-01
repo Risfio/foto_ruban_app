@@ -1,3 +1,6 @@
 # Python compiled files
+
+node_modules/
+bower_components/
 *.py[cod]
 __pycache__/
