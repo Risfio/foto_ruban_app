@@ -6590,3 +6590,12 @@ th.hide-for-touch {
 .icon-bar__container_line-height {
   line-height: 0.7;
 }
+.icon-bar-custom-icon-img {
+  padding-top: 0.6rem!important;
+}
+.icon-bar-custom-icon-img__img {
+  background: transparent url("/static/images/metroui-vk-icon.png") no-repeat scroll 0% 0%;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+}
