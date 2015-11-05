@@ -3142,6 +3142,9 @@ meta.foundation-mq-topbar {
     padding: 1.25rem;
     text-align: center;
     width: 25%; }
+    .icon-bar > a {
+      padding-right: 3.25rem!important;
+    }
     .icon-bar > * i, .icon-bar > * img {
       display: block;
       margin: 0 auto; }
@@ -6579,3 +6582,11 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+/*My custom styles*/
+.icon-bar__container {
+
+}
+.icon-bar__container_line-height {
+  line-height: 0.7;
+}
