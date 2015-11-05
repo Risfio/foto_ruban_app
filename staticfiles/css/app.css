@@ -3143,7 +3143,7 @@ meta.foundation-mq-topbar {
     text-align: center;
     width: 25%; }
     .icon-bar > a {
-      padding-right: 3.25rem!important;
+      padding-right: 1.80rem!important;
     }
     .icon-bar > * i, .icon-bar > * img {
       display: block;
@@ -6592,6 +6592,9 @@ th.hide-for-touch {
 }
 .icon-bar-custom-icon-img {
   padding-top: 0.6rem!important;
+}
+.icon-bar-custom-icon-img_padding-top {
+  padding-top: 1.5rem;
 }
 .icon-bar-custom-icon-img__img {
   background: transparent url("/static/images/metroui-vk-icon.png") no-repeat scroll 0% 0%;
