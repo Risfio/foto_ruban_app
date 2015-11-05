@@ -3142,6 +3142,9 @@ meta.foundation-mq-topbar {
     padding: 1.25rem;
     text-align: center;
     width: 25%; }
+    .icon-bar > a {
+      padding-right: 1.80rem!important;
+    }
     .icon-bar > * i, .icon-bar > * img {
       display: block;
       margin: 0 auto; }
@@ -6579,3 +6582,23 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+/*My custom styles*/
+.icon-bar__container {
+
+}
+.icon-bar__container_line-height {
+  line-height: 0.7;
+}
+.icon-bar-custom-icon-img {
+  padding-top: 0.6rem!important;
+}
+.icon-bar-custom-icon-img_padding-top {
+  padding-top: 1.5rem;
+}
+.icon-bar-custom-icon-img__img {
+  background: transparent url("/static/images/metroui-vk-icon.png") no-repeat scroll 0% 0%;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+}
