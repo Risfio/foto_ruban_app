@@ -58,7 +58,7 @@ body {
   background: #fff;
   color: #222;
   cursor: auto;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -1773,7 +1773,7 @@ meta.foundation-mq-topbar {
       .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
         color: #FFFFFF;
         display: block;
-        font-weight: normal;
+        font-weight: 300;
         padding: 0 0.9375rem;
         width: 75%; }
   .top-bar .toggle-topbar {
@@ -6601,4 +6601,7 @@ th.hide-for-touch {
   background-size: cover;
   width: 1.5rem;
   height: 1.5rem;
+}
+.metroui-logo__name_font-family {
+  font-family: "Open Sans";
 }
