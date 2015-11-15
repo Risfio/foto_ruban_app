@@ -19,5 +19,8 @@
   ],
   "devDependencies": {
     "foundation": "~5.5.3"
+  },
+  "dependencies": {
+    "open-sans-fontface": "~1.4.2"
   }
 }
