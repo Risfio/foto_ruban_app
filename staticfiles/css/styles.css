@@ -469,7 +469,19 @@ a:visited {
 		}
 /* end contacts page styles */
 
+.footer__copyrights {
 
+}
+.copyright {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.confidential {
+	display: block;
+	width: 100%;
+	text-align: center;	
+}
 /* need to test on iPad and android */
 
 @media only screen and (max-width: 980px){
