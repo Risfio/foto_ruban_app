@@ -563,7 +563,11 @@ a:visited {
 }
 
 .service-price-caption__text {
+}
 
+.service-price-caption__text_font {
+	color: #45688e;
+	font-size: inherit;
 }
 
 .service-price-caption_font {
