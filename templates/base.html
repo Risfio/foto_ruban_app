@@ -285,5 +285,27 @@ fbq('track', 'CompleteRegistration');
 	<script type="text/javascript">
 	{% block bottom-scripts %}{% endblock %}
 	</script>
+    <script>
+    var showImage = function(src_url){
+        var el = document.getElementsByClassName('showimage')[0];
+        el.children[0].src = src_url;
+        el.style.display = 'block';
+    }
+
+    var showimage = document.getElementsByClassName('showimage')[0];
+    showimage.addEventListener('click', function(evnt){
+        el = document.getElementsByClassName('showimage')[0];
+        el.style.display = 'none';
+    }, false);
+
+    var zoomAllowed = function(evnt){
+        evnt.target.classList.add('js-zoom-allowed');
+    }
+
+    var _links = document.getElementsByClassName('card-item-image-link');
+    for(var i=0; i<_links.length; i++){
+        _links[i].addEventListener("mouseover", zoomAllowed, false);
+    }
+    </script>
 </body>
 </html>
