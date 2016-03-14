@@ -55,7 +55,7 @@
                 if(!target.isActive){
                     target.style.display = 'none';
                 }
-            }, 2000);
+            }, 1000);
         }
     }
     this.onload = function(){
