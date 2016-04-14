@@ -1,0 +1,147 @@
+
+/* App styles*/
+/*Top menu icon*/
+.logo-text {
+  line-height: 0.4!important;
+}
+.contacts__contact-container {
+
+}
+.contact-link {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+.contact {
+  padding: 0 2rem;
+}
+.contact-icon {
+  display: inline;
+  float: left;
+  height: 1.5em;
+  width: 1.5em;
+}
+.contact-icon_instgrm {
+  background: url(http://foto-ruban.ru/static/images/intsagram_icon.png) no-repeat;
+  background-size: cover;
+}
+.contact-icon_phone {
+  background: url(http://foto-ruban.ru/static/images/phone_icon.png) no-repeat;
+  background-size: cover;
+}
+.contact-icon_vk {
+  background: url(http://static.wixstatic.com/media/51baa9_5126f38ffa914d37866ca0c93d443f2c.png) no-repeat;
+  background-size: cover;
+}
+.contact-icon_fb {
+  background: url(http://foto-ruban.ru/static/images/fb_icon.png) no-repeat;
+  background-size: cover;
+}
+
+.page__content-line {
+    padding: 1rem 0 1rem 0;
+}
+
+.page__footer-line {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.page__footer-line_background {
+  background-color: #e6e6e6;
+}
+
+.copyright-link {
+  text-decoration: none;
+}
+
+.copyright-text {
+  text-align: center;
+  margin: 0!important;
+  font-size: 0.80rem;
+}
+
+.confidential-link {
+  text-decoration: none;
+}
+.confidential {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.80rem;
+}
+
+.card {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card_padding {
+  padding: 0 1rem 0 1rem;
+}
+
+.card__thumbnail {
+border: solid 4px #fefefe;
+box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+display: block;
+line-height: 0;
+/*max-width: 80%;*/
+transition: box-shadow 200ms ease-out;
+border-radius: 0;
+}
+
+.card__thumbnail_margin {
+  margin-bottom: 1rem;
+}
+
+.card__thumbnail:hover, .card__thumbnail:focus {
+    box-shadow: 0 0 6px 1px rgba(33, 153, 232, 0.5); }
+
+
+.card__thumbnail_margin {
+  margin: 1rem auto;
+}
+.card__thumbnail_stack-for-small {
+  max-width: 80%;
+}
+@media screen and (max-width: 39.9375em){
+  .card__thumbnail_stack-for-small {
+    max-width: 100%!important;
+  }
+  .card__thumbnail_margin {
+    margin: 0!important;
+  }
+}
+.card-thumbnail__image {
+  width: 100%;
+}
+
+.card-thumbnail__date {
+  font-size: 0.45rem!important;
+  color: brown;
+}
+
+.card-thumbnail__date_margin {
+  margin-bottom: 0!important;
+}
+
+.card-thumbnail__date_padding {
+  padding: 0 0 0.1rem 0;
+}
+
+.js-dropdown-menu {
+  display: none;
+}
+
+.js-dropdown-menu-two {
+  display: none;
+}
+
+@media screen and (max-width: 64em){
+  .card-thumbnail__text {
+    font-size: 0.75rem!important;
+  }
+}
+
+/*App custom styles end*/
