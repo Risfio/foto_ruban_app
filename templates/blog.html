@@ -3,34 +3,23 @@
 {% block meta-description %}Блог - серии фотографий по датам.{% endblock %}
 {% block meta-keywords %}Недорогой,свадебный фотограф, Москва, свадьбы, семейные фотосессии.{% endblock %}
 {% block more_css %}
-    <link rel="stylesheet" type="text/css" href="/static/css/paginator.css"/>
 {% endblock %}
 {% block content %}
-<div class="blog-content" itemscope itemtype="http://schema.org/Blog">
-    {% for post in posts %}
-    <div class="blog__blog-article">
-        <a href="{{ post.url }}" class="blog-article-link">
-        <div class="blog-article blog-article_border_bottom" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-            <div class="blog-article__blog-article-date">
-                    <p class="blog-article-caption" itemprop="headline">{{ post.caption }}</p>
-                    <span class="block-article-date-text" itemprop="datePublished" datetime="{{ post.schema_date }}">{{ post.date }}</span>
-            </div>
-            <div class="blog-article__blog-article-description">
-                <p class="blog-article-description" itemprop="text">
-                    {{ post.text|safe }}
-                </p>
-            </div>
-            <div class="blog-article__blog-article-image">
-                {% if not post.image %}
-                <img class="blog-article-image__image" src="/static/images/temporary_anavailable.png" itemprop="image"/>
-                {% else %}
-                <img class="blog-article-image__image" src="/{{ post.image }}" itemprop="image"/>
-                {% endif %}
-            </div>
-        </div>
-		</a>
-    </div>
-    {% endfor %}
-    {% include "paginator_block.html" %}
+{% for post in posts %}
+<div class="row align-center small-collapse">
+	<div class="small-12 columns">
+		<div class="media-object">
+			<div class="card card_padding">
+				<a href="{{ post.url }}" class="card_link">
+					<div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small">
+						<img src="/{{ post.image }}" class="card-thumbnail__image"/>
+						<p class="card__text">{{ post.caption }}</p>
+						<p class="card-thumbnail__date card-thumbnail__date_padding card-thumbnail__date_margin">{{ post.date }}</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
+{% endfor %}
 {% endblock %}
