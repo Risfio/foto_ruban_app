@@ -1,42 +1,37 @@
 {% extends "base.html" %}
 {% block title %}{{ post.caption }} {{ post.date }}{% endblock %}
 {% block more_css %}
-    <link rel="stylesheet" type="text/css" href="/static/css/paginator.css"/>
 {% endblock %}
 {% block content %}
-<div class="blog-content" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="blog__blog-article">
-            <div class="blog-article__blog-article-date">
-                    <p class="blog-article-caption" itemprop="headline">{{ post.caption }}</p>
-                    <span class="block-article-date-text" itemprop="datePublished" datetime="{{ post.schema_date }}">{{ post.date }}</span>
-            </div>
-            <div class="blog-article__blog-article-description">
-                <p class="blog-article-description" itemprop="text">
-                    {{ post.text|safe }}
-                </p>
-            </div>
-	</div>
-    {% for entry in entryes %}
-    <div class="blog__blog-article">
-        <div class="blog-article" itemprop="blogPost">
-            <div class="blog-article__blog-article-description">
-                <p class="blog-article-description" itemprop="text">
-                    {{ entry.text }}
-                </p>
-            </div>
-            <div class="blog-article__blog-article-image">
-                {% if not entry.image %}
-                <img class="blog-article-image__image" data-src="/static/images/temporary_anavailable.png" itemprop="image"/>
-                {% else %}
-                <img class="blog-article-image__image" data-src="/{{ entry.image }}" itemprop="image"/>
-                {% endif %}
+<div class="row align-center small-collapse">
+    <div class="small-12 columns">
+        <div class="media-object">
+            <div class="card card_padding">
+                <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small">
+                    <p class="card__text">{{ post.caption }}</p>
+                    <p class="card-thumbnail__date card-thumbnail__date_padding card-thumbnail__date_margin">{{ post.date }}</p>
+                    <p class="card__text">{{ post.text|safe }}</p>
+                </div>
             </div>
         </div>
     </div>
-    {% endfor %}
-{#    {% include "paginator_block.html" %}	#}
 </div>
+{% for entry in entryes %}
+<div class="row align-center small-collapse">
+    <div class="small-12 columns">
+        <div class="media-object">
+            <div class="card card_padding">
+                <a href="/{{ entry.image }}" class="card_link">
+                    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small">
+                        <img src="/{{ entry.image }}" class="card-thumbnail__image"/>
+                        <p class="card__text">{{ entry.text }}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
 {% block bottom-scripts %}
-	imagesLoade(document.querySelector('.blog-content'));	
 {% endblock %}
