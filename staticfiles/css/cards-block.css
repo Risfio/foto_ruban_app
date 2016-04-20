@@ -1,0 +1,134 @@
+.cards {
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.cards_padding-vertical {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.cards_padding-horizontal {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.card {
+	font-size: inherit;
+	min-height: 480px!important;
+}
+
+.card__card-item {
+	display: inline;
+}
+
+.card__card-item_from-top {
+	margin-top: 2rem;
+}
+
+.card__card-item_left {
+	float: left;
+}
+
+.card__card-item_right {
+	float: right;
+}
+
+.card__card-item_width {
+	width: 50%;
+}
+
+.card-item-text {
+	overflow: hidden;
+}
+
+.card-item-text_padding-right {
+	padding-right: 2rem;
+}
+
+.card-item-text_padding-left {
+	padding-left: 2rem;
+}
+
+.card-text {
+	word-wrap: break-word;
+}
+
+.card-text_padding_0 {
+	padding: 0;
+}
+
+.card-text_big {
+	font-size: 1.5rem;
+}
+
+.card-text_normal {
+	font-size: 1.1rem;
+}
+
+.card-text_smaller {
+	font-size: 0.75rem;
+}
+
+.card-text_italic {
+	font-style: italic;
+}
+
+q {
+	quotes: "\201c" "\201d";
+}
+
+
+.card-item-image__container {
+
+}
+
+.card-item-image {
+	width: 100%;
+}
+
+.card-item-image-link {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+}
+
+.card-item-image-link:hover {
+	cursor: zoom-in;
+}
+
+.card-item-image__link:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+.card-item-text__signature {
+	display: inline;
+	float: right;
+}
+
+.signature {
+	color : #935656;
+	font-style: italic;
+	font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 720px) {
+	.cards * {
+		font-size: 12px!important;
+		overflow: hidden;
+	}
+}
+
+
+@media only screen and (max-width: 540px) {
+	.card__card-item_from-top {
+		margin-top: 0;
+	}
+	.card__card-item { 
+		display: block;
+	}
+	.card__card-item_width {
+		width: 100%;
+	}
+}
