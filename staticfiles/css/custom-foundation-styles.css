@@ -82,13 +82,16 @@
 }
 
 .card__thumbnail {
-border: solid 4px #fefefe;
-box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
 display: block;
 line-height: 0;
 /*max-width: 80%;*/
 transition: box-shadow 200ms ease-out;
 border-radius: 0;
+}
+
+.card__thumbnail_border {
+  border: solid 4px #fefefe;
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
 }
 
 .card__thumbnail_margin {

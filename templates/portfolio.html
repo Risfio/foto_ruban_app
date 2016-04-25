@@ -2,31 +2,30 @@
 {% block title %}{{ title }}{% endblock %}
 {% block meta-description %}{{ description }}{% endblock %}
 {% block meta-keywords %}{{ keywords }}{% endblock %}
-{% load static from staticfiles %}
 {% block more_css %}
-    <link rel="stylesheet" type="text/css" href="{% static "css/articles.css" %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static "css/paginator.css" %}"/>
 {% endblock %}
 {% block content %}
-    <div class="content-wrapper">
-        {% for item in items %}
-        <div itemscope itemtype="http://schema.org/ImageObject" class="portfolio__portfolio-article">
-	    {# Yandex fotki changes #}
-	    {% if item.outer_image %}
-	    <img itemprop="image" data-src="{{ item.outer_image }}" class="portfolio-article__image"/>
-	    {% else %}
-            <img itemprop="image"  data-src="/{{ item.image }}" class="portfolio-article__image"/>
-	    {% endif %}
-			<!-- Test videos -->
-			{% if item.video %}
-			{{ item.video|safe }}
-			{% endif %}
-			<!-- End test videos -->
-			<meta itemprop="contentUrl" content="{{ item.image}}"/>
-            <meta itemprop="caption" content="{{ item.alternateName }}"/>
-            <meta itemprop="publisher" content="/contacts/"/>
-        </div>
-        {% endfor %}
-        {% include "paginator_block.html" %}
-    </div>
+	{% for item in items %}
+	<div class="row align-center small-collapse">
+	    <div class="small-12 columns">
+	        <div class="media-object">
+	            <div class="card card_padding">
+	            	{% if item.outer_image %}
+	                <a href="/{{ item.outer_image }}" class="card_link">
+	                    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small">
+	                        <img src="/{{ item.outer_image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
+	                    </div>
+	                </a>
+	                {% else %}
+	                <a href="/{{ item.image }}" class="card_link">
+	                    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small">
+	                        <img src="/{{ item.image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
+	                    </div>
+	                </a>
+	                {% endif %}
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	{% endfor %}
 {% endblock %}
