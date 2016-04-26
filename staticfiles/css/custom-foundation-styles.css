@@ -163,4 +163,24 @@ line-height: 0;
   }
 }
 
+.prices-block {
+
+}
+
+.prices-block_margin-bottom {
+  margin-bottom: 1.75rem;
+}
+
+.prices-block__caption {
+  color: #45688e;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.prices-block__price {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}
 /*App custom styles end*/
