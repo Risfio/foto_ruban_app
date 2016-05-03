@@ -1,16 +1,33 @@
 
 /* App styles*/
 /*Top menu icon*/
+.off-canvas-list__link {
+
+}
+
+.off-canvas-list__link_color {
+  color: #6e6e6e!important;
+}
+
+.logo-text-link {
+  text-decoration: none;
+}
+
+.logo-text-link_color {
+  color: #6E6E6E!important;
+}
+
 .logo-text {
   line-height: 0.4!important;
 }
+
 .contacts__contact-container {
 
 }
 .contact-link {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #6E6E6E!important;
 }
 .contact {
   padding: 0 2rem;
@@ -81,6 +98,18 @@
   padding: 0 1rem 0 1rem;
 }
 
+.card__link {
+
+}
+
+.card__link_color {
+  color: #6e6e6e;
+}
+
+.card__link_color:hover, .card__link_color:focus {
+  color: #6E6E6E;
+}
+
 .card__thumbnail {
 display: block;
 line-height: 0;
@@ -119,6 +148,14 @@ line-height: 0;
 }
 .card-thumbnail__image {
   width: 100%;
+}
+
+.card-thumbnail__text {
+
+}
+
+.card-thumbnail__text_color {
+  color: #6e6e6e;
 }
 
 .card-thumbnail__date {
@@ -182,5 +219,13 @@ line-height: 0;
   font-style: italic;
   font-weight: bold;
   text-decoration: underline;
+}
+
+.otzivi-text {
+  word-wrap: break-word;
+}
+
+.otzivi-text_italic {
+  font-style: italic;
 }
 /*App custom styles end*/
