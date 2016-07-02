@@ -2539,7 +2539,7 @@ select {
     color: #fefefe; }
 
 .media-object {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   display: block; }
   .media-object img {
     max-width: none; }
