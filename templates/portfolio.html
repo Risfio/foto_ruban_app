@@ -11,15 +11,15 @@
 	        <div class="media-object">
 	            <div class="card card_padding">
 	            	{% if item.outer_image %}
-	                <a href="/{{ item.outer_image }}" class="card_link">
+	                <a href="{{ item.outer_image }}" class="card_link">
 	                    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small card__thumbnail_animation">
-	                        <img src="/{{ item.outer_image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
+	                        <img src="{{ item.outer_image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
 	                    </div>
 	                </a>
 	                {% else %}
-	                <a href="/{{ item.image }}" class="card_link">
+	                <a href="{{ item.image }}" class="card_link">
 	                    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small card__thumbnail_animation">
-	                        <img src="/{{ item.image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
+	                        <img src="{{ item.image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
 	                    </div>
 	                </a>
 	                {% endif %}
