@@ -228,4 +228,8 @@ line-height: 0;
 .otzivi-text_italic {
   font-style: italic;
 }
+
+.prices-row_padding-bot {
+    padding-bottom : 1em;
+}
 /*App custom styles end*/
