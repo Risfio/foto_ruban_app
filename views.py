@@ -116,7 +116,7 @@ def blog(request):
     page = 1
     if not request.GET.get('page') is None:
         page = int(request.GET.get('page'))
-    paginator = Paginator(Blog.objects.all(), 8)
+    paginator = Paginator(Blog.objects.all(), 40)
     posts = paginator.page(page)
     for post in posts:
         post.url = post.get_absolute_url()
