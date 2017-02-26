@@ -230,6 +230,7 @@ line-height: 0;
 }
 
 .prices-row_padding-bot {
+    padding-top: 2em;
     padding-bottom : 1em;
 }
 /*App custom styles end*/
