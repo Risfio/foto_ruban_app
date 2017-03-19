@@ -75,9 +75,9 @@ def portfolio(request, razdel):
             if razdel_name == razdel:
                 if razdel == 'video':
                     template_file = 'portfolio_video.html'
-                    items, num_pages = get_page(request.GET, 3, PortfolioVideo.objects.filter(razdel=razdel_id))
+                    items, num_pages = get_page(request.GET, 10, PortfolioVideo.objects.filter(razdel=razdel_id))
                 elif razdel != 'video':
-                    items, num_pages = get_page(request.GET, 3, Portfolio.objects.filter(razdel=razdel_id))
+                    items, num_pages = get_page(request.GET, 10, Portfolio.objects.filter(razdel=razdel_id))
                     pages = [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, int(page))} for num in num_pages]
     elif razdel is None:
         items, num_pages = get_page(request.GET, 2, Portfolio.objects.filter(razdel=1))
@@ -116,7 +116,7 @@ def blog(request):
     page = 1
     if not request.GET.get('page') is None:
         page = int(request.GET.get('page'))
-    paginator = Paginator(Blog.objects.all(), 40)
+    paginator = Paginator(Blog.objects.all(), 10)
     posts = paginator.page(page)
     for post in posts:
         post.url = post.get_absolute_url()
@@ -133,7 +133,7 @@ def blog_entryes(request, data):
     if not request.GET.get('page') is None:
         page = int(request.GET.get('page'))
     post = Blog.objects.get(date=date(year=int(year), month=int(month), day=int(day)))
-    paginator = Paginator(BlogImage.objects.filter(post=post), 3, allow_empty_first_page=True)
+    paginator = Paginator(BlogImage.objects.filter(post=post), 10, allow_empty_first_page=True)
     return render(request, "blog_post.html",
                   {'post': post,
                    'entryes': BlogImage.objects.filter(post=post),
