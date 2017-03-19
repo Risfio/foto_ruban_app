@@ -1,15 +1,17 @@
 {% block paginator %}
-    <div class="paginator" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        {% if paginator %}
-            {% for page in paginator %}
-                <a href="{{ page.url }}" class="paginator__link
-                    {% if page.active == True %}paginator__link_active
-                    {% else %}paginator__link_non-active{% endif %}" itemprop="url">
-                    <span class="paginator__text" itemprop="name">
-                        {{ page.text }}
-                    </span>
-                </a>
-            {% endfor %}
-        {% endif %}
+    <div class="row">
+        <div class="small-12 columns">
+            {% if paginator %}
+                {% for page in paginator %}
+                    <a href="{{ page.url }}" class="paginator__link
+                        {% if page.active == True %}paginator__link_active
+                        {% else %}paginator__link_non-active{% endif %}" itemprop="url">
+                        <span class="paginator__text" itemprop="name">
+                            {{ page.text }}
+                        </span>
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
