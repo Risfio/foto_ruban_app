@@ -77,7 +77,7 @@ def portfolio(request, razdel):
 		    template_file = 'portfolio_video.html'
 		    items, num_pages = get_page(request.GET, 20, PortfolioVideo.objects.filter(razdel=razdel_id))
 		elif razdel != 'video':
-		    items, num_pages = get_page(request.GET, 20, Portfolio.objects.filter(razdel=razdel_id))
+		    items, num_pages = get_page(request.GET, 40, Portfolio.objects.filter(razdel=razdel_id))
                 pages = [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, int(page))} for num in num_pages]
     elif razdel is None:
         items, num_pages = get_page(request.GET, 2, Portfolio.objects.filter(razdel=1))
@@ -116,7 +116,7 @@ def blog(request):
     page = 1
     if not request.GET.get('page') is None:
         page = int(request.GET.get('page'))
-    paginator = Paginator(Blog.objects.all(), 8)
+    paginator = Paginator(Blog.objects.all(), 40)
     posts = paginator.page(page)
     for post in posts:
         post.url = post.get_absolute_url()
