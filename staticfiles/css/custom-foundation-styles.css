@@ -232,4 +232,22 @@ line-height: 0;
 .prices-row_padding-bot {
     padding-bottom : 1em;
 }
+
+.paginator {
+  text-align: center;
+}
+
+.paginator__text {
+  display: block-inline;
+  padding: 0.4em;
+  font-size: 1em;
+}
+
+.paginator__link {
+  color : #2f2f2f;
+}
+
+.paginator__link_active {
+  background-color: #e4e4e4;
+}
 /*App custom styles end*/
