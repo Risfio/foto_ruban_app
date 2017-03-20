@@ -129,14 +129,14 @@ def blog(request):
 def blog_entryes(request, data):
     get_active = lambda x, current: x == current and True or False
     year, month, day = data.split('-')
-    page = 1
+    #page = 1
     if not request.GET.get('page') is None:
         page = int(request.GET.get('page'))
     post = Blog.objects.get(date=date(year=int(year), month=int(month), day=int(day)))
-    paginator = Paginator(BlogImage.objects.filter(post=post), 10, allow_empty_first_page=True)
+    #paginator = Paginator(BlogImage.objects.filter(post=post), 10, allow_empty_first_page=True)
     return render(request, "blog_post.html",
                   {'post': post,
                    'entryes': BlogImage.objects.filter(post=post),
-                 'entryes': paginator.page(page),
-                 'paginator': [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, int(page))} for num in range(1, paginator.num_pages + 1)]
+     #            'entryes': paginator.page(page),
+     #            'paginator': [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, int(page))} for num in range(1, paginator.num_pages + 1)]
         })
