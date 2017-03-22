@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<form action="/contact-us/" method="POST">{% csrf_token %}
+<form id="sendmsg" action="/contact-us/" method="POST">{% csrf_token %}
 {{ flatpage.content|safe }}
 </form>
 {% endblock %}
