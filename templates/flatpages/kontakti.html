@@ -33,22 +33,25 @@
 		</div>
 		<div class="row">
 			<div class="small-12 columns">
-				<form>
+				<form id="sendmsg" action="/contact-us/">
 					<fieldset>
 						<legend>Обратная&nbsp;связь</legend>
 						<div class="row collapse">
 							<div class="small-9 columns">
-								<input type="text" placeholder="как к вам обращаться"></input>
+								<input name="name" type="text" placeholder="как к вам обращаться"></input>
 							</div>
 							<div class="small-3 columns">
-								<a href="#" class="button prefix">отправить</a>
+							    <a href="javascript:{}" onclick="document.getElementByID('sendmsg').submit();return false;"  class="button prefix">отправить</a>
 							</div>
 						</div>
 						<div class="row collapse">
 							<div class="small-12 columns">
-								<textarea rows=12 placeholder="оставьте здесь ваше сообщение"></textarea>
+								<textarea name="message" rows=12 placeholder="оставьте здесь ваше сообщение"></textarea>
 							</div>
 						</div>
+						<div class="row" collapse>
+						    <div class="small-12 columns">
+							<input name="mail" type="text" placeholer="обратный почтовый адресс"></input>
 					</fieldset>
 				</form>
 			</div>
