@@ -110,8 +110,8 @@
 		 		<li><label class="first">портфолио</label></li>
 		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/svadbi/">свадебная фотография</a></li>
 		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/lovestory/">love story</a></li>
-		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/portreit/">портрет</a></li>
 		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/semeynie/">детская и семейная фотография</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/portreit/">портрет</a></li>
 		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/video/">видео</a></li>
 		 	</ul>
 		 	<hr>
@@ -201,8 +201,8 @@
 						<ul class="menu js-dropdown-menu">
 					 		<li><a href="/portfolio/svadbi/">свадебная фотография</a></li>
 					 		<li><a href="/portfolio/lovestory/">love story</a></li>
-					 		<li><a href="/portfolio/portreit/">портрет</a></li>
 					 		<li><a href="/portfolio/semeynie/">детская и семейная фотография</a></li>
+					 		<li><a href="/portfolio/portreit/">портрет</a></li>
 					 		<li><a href="/portfolio/video/">видео</a></li>
 						</ul>
 					</div>
@@ -216,8 +216,8 @@
 						<ul class="menu js-dropdown-menu-two">
 					 		<li><a href="/portfolio/svadbi/">свадебная фотография</a></li>
 					 		<li><a href="/portfolio/lovestory/">love story</a></li>
-					 		<li><a href="/portfolio/portreit/">портрет</a></li>
 					 		<li><a href="/portfolio/semeynie/">детская и семейная фотография</a></li>
+					 		<li><a href="/portfolio/portreit/">портрет</a></li>
 					 		<li><a href="/portfolio/video/">видео</a></li>
 						</ul>
 					</div>
@@ -268,8 +268,28 @@
 				</div>
 			</nav>
 			<div class="page__content-line">
+				<span name="totop" id="totop"></span>
 				{% block content %}
 				{% endblock %}
+				<div style="position: fixed; left: inherit; top: inherit; right: 1em; bottom: 5em;">
+					<div class="contacts__contact-container">
+						<div class="pop-icon-container">
+							<a href="/" class="pop-link">
+								<span class="pop-icon pop-icon_home"></span>
+								<span class="contact-icon-text"></span>
+							</a>
+						</div>
+					</div>
+					<div class="contacts__contact-container">
+						<div class="pop-icon-container">
+							<a href="#totop" class="pop-link">
+								<span class="pop-icon pop-icon_totop"></span>
+								<span class="contact-icon-text"></span>
+							</a>
+						</div>
+					</div>
+
+				</div>
 			</div>
 			<div class="page__footer-line page__footer-line_background">
 				<div class="row">

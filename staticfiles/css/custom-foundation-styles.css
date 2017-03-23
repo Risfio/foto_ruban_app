@@ -59,6 +59,33 @@
   background-size: cover;
 }
 
+.pop-link {
+  display: block;
+  text-decoration: none;
+  color: #6E6E6E!important;
+}
+
+.pop-icon-container {
+  padding: 0 2rem;
+}
+
+.pop-icon {
+  display: inline;
+  float: left;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.pop-icon_home {
+  background: url(http://www.clipartbest.com/cliparts/Rcd/Kn4/RcdKn4dMi.png) no-repeat;
+  background-size: cover;
+}
+
+.pop-icon_totop {
+  background: url(https://cdn1.iconfinder.com/data/icons/education-set-7/512/arrow6-up-512.png) no-repeat;
+  background-size: cover;
+}
+
 .page__content-line {
     padding: 1rem 0 1rem 0;
 }
