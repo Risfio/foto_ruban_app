@@ -177,6 +177,13 @@ line-height: 0;
   width: 2.5em;
 }
 
+.contact__form_border {
+    border-top : none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none!important;
+}
+
 @media screen and (max-width: 39.9375em){
   .card__thumbnail_stack-for-small {
     max-width: 100%!important;
