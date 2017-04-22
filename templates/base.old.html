@@ -1,287 +1,369 @@
-<!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-	<title>{% block title %}{% endblock %}</title>
-	<meta charset="utf-8">
-	<link rel="shorcut icon" type="image/x-icon" href="http://foto-ruban.ru/static/images/favicon.png">
-	<meta name="yandex-verification" content="670af28b42ed5280"/> 
-	<meta name="google-site-verification" content="EiG5EJzhcDHpe2_rRbH-7_onzS1PeKlFRGL6h9vG8bM" />
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="{% block meta-description %}{% endblock %}"/>
-	<meta name="keywords" content="{% block meta-keywords %}{% endblock %}"/>
-	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
-    {% block more_css %}
-    {% endblock %}
+<title>{% block title %}{% endblock %}</title>
+<meta charset="utf-8">
+<link rel="shorcut icon" type="image/x-icon" href="http://foto-ruban.ru/static/images/favicon.png">
+<meta name="yandex-verification" content="670af28b42ed5280">
+<meta name="google-site-verification" content="EiG5EJzhcDHpe2_rRbH-7_onzS1PeKlFRGL6h9vG8bM">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="{% block meta-description %}{% endblock %}">
+<meta name="keywords" content="{% block meta-keywords %}{% endblock %}">
+<link rel="stylesheet" type="text/css" href="/static/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="/static/css/app.css">
+<link rel="stylesheet" type="text/css" href="/static/css/custom-foundation-styles.css">
+{% block more_css %}
+{% endblock %}
+<!-- Facebook Pixel Code -->
+<script src="http://top-fwz1.mail.ru/js/code.js" id="topmailru-code" async="" type="text/javascript"></script><script src="https://mc.yandex.ru/metrika/watch.js" async="" type="text/javascript"></script><script src="//connect.facebook.net/en_US/fbevents.js" async=""></script><script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','//connect.facebook.net/en_US/fbevents.js');
 
-    <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-            document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-        fbq('init', '485995078274583');
-        fbq('track', "PageView");</script>
-        <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=485995078274583&ev=PageView&noscript=1"
-            /></noscript>
-            <!-- End Facebook Pixel Code -->
-            <script>
-    // ViewContent
-    // Track key page views (ex: product page, landing page or article)
-    fbq('track', 'ViewContent');
-
-
-    // Search
-    // Track searches on your website (ex. product searches)
-    fbq('track', 'Search');
+	fbq('init', '485995078274583');
+	fbq('track', "PageView");</script>
+	<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=485995078274583&ev=PageView&noscript=1"
+		/></noscript>
+		<!-- End Facebook Pixel Code -->
+		<script>
+        // ViewContent
+        // Track key page views (ex: product page, landing page or article)
+        fbq('track', 'ViewContent');
 
 
-    // AddToCart
-    // Track when items are added to a shopping cart (ex. click/landing page on Add to Cart button)
-    fbq('track', 'AddToCart');
+        // Search
+        // Track searches on your website (ex. product searches)
+        fbq('track', 'Search');
 
 
-    // AddToWishlist
-    // Track when items are added to a wishlist (ex. click/landing page on Add to Wishlist button)
-    fbq('track', 'AddToWishlist');
+        // AddToCart
+        // Track when items are added to a shopping cart (ex. click/landing page on Add to Cart button)
+        fbq('track', 'AddToCart');
 
 
-    // InitiateCheckout
-    // Track when people enter the checkout flow (ex. click/landing page on checkout button)
-    fbq('track', 'InitiateCheckout');
+        // AddToWishlist
+        // Track when items are added to a wishlist (ex. click/landing page on Add to Wishlist button)
+        fbq('track', 'AddToWishlist');
 
 
-    // AddPaymentInfo
-    // Track when payment information is added in the checkout flow (ex. click/landing page on billing info)
-    fbq('track', 'AddPaymentInfo');
+        // InitiateCheckout
+        // Track when people enter the checkout flow (ex. click/landing page on checkout button)
+        fbq('track', 'InitiateCheckout');
 
 
-    // Purchase
-    // Track purchases or checkout flow completions (ex. landing on "Thank You" or confirmation page)
-    fbq('track', 'Purchase', {value: '1.00', currency: 'USD'});
+        // AddPaymentInfo
+        // Track when payment information is added in the checkout flow (ex. click/landing page on billing info)
+        fbq('track', 'AddPaymentInfo');
 
 
-    // Lead
-    // Track when a user expresses interest in your offering (ex. form submission, sign up for trial, landing on pricing page)
-    fbq('track', 'Lead');
+        // Purchase
+        // Track purchases or checkout flow completions (ex. landing on "Thank You" or confirmation page)
+        fbq('track', 'Purchase', {value: '1.00', currency: 'USD'});
 
 
-    // CompleteRegistration
-    // Track when a registration form is completed (ex. complete subscription, sign up for a service)
-    fbq('track', 'CompleteRegistration');
+        // Lead
+        // Track when a user expresses interest in your offering (ex. form submission, sign up for trial, landing on pricing page)
+        fbq('track', 'Lead');
+
+
+        // CompleteRegistration
+        // Track when a registration form is completed (ex. complete subscription, sign up for a service)
+        fbq('track', 'CompleteRegistration');
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/js/jquery.lazyloadxt.min.js"></script>
-    <script type="text/javascript" src="/static/js/imagesloaded.pkgd.js"></script>
-    <script type="text/javascript" src="/static/js/masonry.pkgd.min.js"></script>
-    <script type="text/javascript" src="/static/js/utils.js"></script>
-    <script type="text/javascript" src="/static/js/scripts.js"></script>
+    <script src="/static/js/vendor/jquery.min.js"></script>
+    <script src="/static/js/foundation.min.js"></script>
 </head>
-<body class="page" itemscope itemtype="http://schema.org/WebPage">
-    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter36025585 = new Ya.Metrika({ id:36025585, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/36025585" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
-    <!-- Rating@Mail.ru counter -->
-    <script type="text/javascript">
-    var _tmr = window._tmr || (window._tmr = []);
-    _tmr.push({id: "2396116", type: "pageView", start: (new Date()).getTime()});
-    (function (d, w, id) {
-      if (d.getElementById(id)) return;
-      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-      ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-    })(document, window, "topmailru-code");
-    </script><noscript><div style="position:absolute;left:-10000px;">
-    <img src="//top-fwz1.mail.ru/counter?id=2396116;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
-    </div></noscript>
-    <!-- //Rating@Mail.ru counter -->
-	<div class="page page__header-line">
-		<div class="page header">
-			<div class="logo logo__logo-container">
-				<div class="page logo">
-					<div class="logo logo__logo-name" itemprop="author" itemscope itemtype="http://schema.org/Person">
-						<a href="/" style="text-decoration: none;">
-							<p class="logo logo-text" itemprop="name">
-								Илья&nbsp;Рубан
-							</p>
-							<meta itemprop="url" content="http://foto-ruban.ru/contacts/"/>
-						</a>
-					</div>
-					<div class="logo logo__logo-desc">
-						<p class="logo desc-text">фотограф</p>
-					</div>
-				</div>
-			</div>
-			<div class="navigation__navigation-container">
-                <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <div class="navigation">
-
-                        <div class="navigation__item-container css_portfolio">
-                            <div class="navigation-item navigation-item_border-rigth">
-    {#							<a class="item-link" href="#">#}
-    {#								<p class="item-link item-text" onmouseover="showMenu('.navigation__portfolio-container');" onclick="showhideonclick('.navigation__portfolio-container');">Портфолио</p>#}
-    {#							</a>#}
-                                <a class="item-link" href="#" itemprop="url">
-                                    <p class="item-link item-text js-popup-portfolio" itemprop="name">Портфолио</p>
-                                </a>
-                            </div>
-                            <!-- Manual element inserting! Non pybem!!! -->
-                            <div class="navigation__portfolio-container js-hidden-portfolio">
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/svadbi/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">свадебная фотография</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/lovestory/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Love Story</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/portreit/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Портрет</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/semeynie/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Детская и семейная фотография</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-popup">
-                                    <div class="portfolio-popup__popup-item">
-                                        <a href="/portfolio/video/" class="popup-item__item-link" itemprop="url">
-                                            <p class="popup-item__item-text" itemprop="name">Видео</p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of manual inserting -->
-			</div>
-                        <div class="navigation__item-container">
-                            <div class="menu navigation-item_border-rigth">
-                                <a class="menu-link" href="/blog/" itemprop="url">
-                                    <p class="menu-link menu-text" itemprop="name">Блог</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="navigation__item-container">
-                            <div class="navigation-item navigation-item_border-rigth">
-                                <a class="item-link" href="/otzivi/" itemprop="url">
-                                    <p class="item-link item-text" itemprop="name">Отзывы</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="navigation__item-container">
-                            <div class="menu navigation-item_border-rigth">
-                                <a class="menu-link" href="/prices/" itemprop="url">
-                                    <p class="menu-link menu-text" itemprop="name">Услуги и цены</p>
-                                </a>
-                            </div>
-                        </div>
-
-                        </div>
-                        <div class="navigation__item-container">
-                            <div class="navigation-item">
-                                <a class="item-link" href="/contacts/" itemprop="url">
-                                    <p class="item-link item-text" itemprop="name">Контакты</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-			</div>
-		</div>
-	</div>
-	<div class="page page__content-line" itemprope="mainContentOfPage">
-        {% block content %}
-        {% endblock %}
-		<a href="#" class="navigation-link-top"></a>
-		<a href="/" class="navigation-link-home navigation-link-home_margin-bot"></a>
-	</div>
-	<div class="page page__footer-line">
-		<div class="footer">
-			<div class="footer__contacts-container">
-				<div class="contacts">
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="tel: +7 925 823-84-40" class="contact-link">
-								<span class="contact-icon contact-icon_phone"></span>
-								<span class="contact-icon-text">+7&nbsp;925&nbsp;823-84-40</span>
-							</a>
-						</div>
-					</div>
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="http://instagram.com/foto_ruban/" class="contact-link">
-								<span class="contact-icon contact-icon_instgrm"></span>
-								<span class="contact-icon-text"></span>
-							</a>
-						</div>
-					</div>
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="http://facebook.com/profile.php?id=100009428172184" class="contact-link">
-								<span class="contact-icon contact-icon_fb"></span>
-								<span class="contact-icon-text"></span>
-							</a>
-						</div>
-					</div>
-					<div class="contacts__contact-container">
-						<div class="contact">
-							<a href="https://vk.com/id281922907" class="contact-link">
-								<span class="contact-icon contact-icon_vk"></span>
-								<span class="contact-icon-text"></span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-            <div class="footer__copyrights">
-                <div class="copyright">
-                    <p class="copyright-text">&#169;&nbsp;<a href="http://foto-ruban.ru">FotoRuban</a>Все права защищены</p>
-                </div>
-            </div>
-            <div class="footer__confidential">
-                <div class="confidential">
-                    <a href="/confidentials/">Политика конфендициальности</a>
-                </div>
-            </div>
-		</div>
-	</div>
+<body class="" itemscope="" itemtype="http://schema.org/WebPage">
+	<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter36025585 = new Ya.Metrika({ id:36025585, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/36025585" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+	<!-- Rating@Mail.ru counter -->
 	<script type="text/javascript">
-	{% block bottom-scripts %}{% endblock %}
-	</script>
-    <script>
-    var showImage = function(src_url){
-        var el = document.getElementsByClassName('showimage')[0];
-        el.children[0].src = src_url;
-        el.style.display = 'block';
-    }
-
-    var showimage = document.getElementsByClassName('showimage')[0];
-    showimage.addEventListener('click', function(evnt){
-        el = document.getElementsByClassName('showimage')[0];
-        el.style.display = 'none';
-    }, false);
-
-    var zoomAllowed = function(evnt){
-        evnt.target.classList.add('js-zoom-allowed');
-    }
-
-    var _links = document.getElementsByClassName('card-item-image-link');
-    for(var i=0; i<_links.length; i++){
-        _links[i].addEventListener("mouseover", zoomAllowed, false);
-    }
-    </script>
+		var _tmr = window._tmr || (window._tmr = []);
+		_tmr.push({id: "2396116", type: "pageView", start: (new Date()).getTime()});
+		(function (d, w, id) {
+			if (d.getElementById(id)) return;
+			var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+			ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+			var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+			if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+		})(document, window, "topmailru-code");
+	</script><noscript><div style="position:absolute;left:-10000px;">
+	<img src="//top-fwz1.mail.ru/counter?id=2396116;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<div class="off-canvas-wrapper">
+	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+		 <div aria-hidden="true" class="off-canvas position-left" id="offCanvas" data-off-canvas="fotoOffCanvas" data-position="left">
+		 	<ul class="off-canvas-list">
+		 		<li><label class=""><a class="off-canvas-list__link off-canvas-list__link_color" href="/">На главную</a></label></li>
+		 	</ul>
+		 	<hr>
+		 	<ul class="off-canvas-list">
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/blog/">серии</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/otzivi/">отзывы</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/prices/">услуги&nbsp;и&nbsp;цены</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/contacts/">контакты</a></li>
+		 	</ul>
+		 	<hr>
+		 	<ul class="off-canvas-list">
+		 		<li><label class="first">портфолио</label></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/svadbi/">свадебная фотография</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/lovestory/">love story</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/semeynie/">детская и семейная фотография</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/portreit/">портрет</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="/portfolio/video/">видео</a></li>
+		 	</ul>
+		 	<hr>
+		 	<ul class="off-canvas-list">
+		 		<li><label class="first">контакты</label></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="http://instagram.com/foto_ruban/">instagram</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="http://facebook.com/profile.php?id=100009428172184">facebook</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="https://vk.com/id281922907">vkontakte</a></li>
+		 		<li><a class="off-canvas-list__link off-canvas-list__link_color" href="tel: +7 925 823-84-40">+7-925-823-84-40</a></li>
+		 	</ul>
+		 </div>
+<!-- End hidden menu -->
+		<div class="off-canvas-content" data-off-canvas-content="">
+			<div class="title-bar hide-for-medium">
+				<div class="title-bar-right">
+					<button aria-controls="offCanvas" aria-expanded="false" class="menu-icon" type="button" data-open="offCanvas"></button>
+				</div>
+			</div>
+			<nav class="show-for-medium">
+				<div class="top-bar">
+					<div class="top-bar-left">
+						<ul class="menu">
+							<li class="">
+								<a href="/" class="logo-text-link logo-text-link_color">
+									<h4 class="logo-text">Илья&nbsp;Рубан</h4>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="top-bar-right show-for-large">
+						<ul class="menu" data-dropdown-menu>
+							<li><a href="#" class="js-dropdown-trigger">портфолио</a></li>
+							<li><a href="/blog/">серии</a></li>
+							<li><a href="/otzivi/">отзывы</a></li>
+							<li><a href="/prices/">услуги&nbsp;и&nbsp;цены</a></li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="tel: +7 925 823-84-40" class="contact-link">
+											<!-- <span class="contact-icon contact-icon_phone"></span> -->
+											<span class="contact-icon-text">+7&nbsp;925&nbsp;823-84-40</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="/contacts/" class="contact-link">
+											<span class="contact-icon contact-icon_mail"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="http://instagram.com/foto_ruban/" class="contact-link">
+											<span class="contact-icon contact-icon_instgrm"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="https://vk.com/id281922907" class="contact-link">
+											<span class="contact-icon contact-icon_vk"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="http://facebook.com/profile.php?id=100009428172184" class="contact-link">
+											<span class="contact-icon contact-icon_fb"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="menu js-dropdown-menu">
+					 		<li><a href="/portfolio/svadbi/">свадебная фотография</a></li>
+					 		<li><a href="/portfolio/lovestory/">love story</a></li>
+					 		<li><a href="/portfolio/semeynie/">детская и семейная фотография</a></li>
+					 		<li><a href="/portfolio/portreit/">портрет</a></li>
+					 		<li><a href="/portfolio/video/">видео</a></li>
+						</ul>
+					</div>
+					<div class="top-bar show-for-medium hide-for-large">
+						<ul class="menu" data-dropdown-menu>
+							<li><a href="#" class="js-dropdown-two">портфолио</a></li>
+							<li><a href="/blog/">серии</a></li>
+							<li><a href="/otzivi/">отзывы</a></li>
+							<li><a href="/prices/">услуги&nbsp;и&nbsp;цены</a></li>
+						</ul>
+						<ul class="menu js-dropdown-menu-two">
+					 		<li><a href="/portfolio/svadbi/">свадебная фотография</a></li>
+					 		<li><a href="/portfolio/lovestory/">love story</a></li>
+					 		<li><a href="/portfolio/semeynie/">детская и семейная фотография</a></li>
+					 		<li><a href="/portfolio/portreit/">портрет</a></li>
+					 		<li><a href="/portfolio/video/">видео</a></li>
+						</ul>
+					</div>
+					<div class="top-bar show-for-medium hide-for-large">
+						<ul class="menu">
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="tel: +7 925 823-84-40" class="contact-link">
+											<!-- <span class="contact-icon contact-icon_phone"></span> -->
+											<span class="contact-icon-text">+7&nbsp;925&nbsp;823-84-40</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="/contacts/" class="contact-link">
+											<span class="contact-icon contact-icon_mail"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="http://instagram.com/foto_ruban/" class="contact-link">
+											<span class="contact-icon contact-icon_instgrm"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="http://facebook.com/profile.php?id=100009428172184" class="contact-link">
+											<span class="contact-icon contact-icon_fb"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contacts__contact-container">
+									<div class="contact">
+										<a href="https://vk.com/id281922907" class="contact-link">
+											<span class="contact-icon contact-icon_vk"></span>
+											<span class="contact-icon-text"></span>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="page__content-line">
+				<span name="totop" id="totop"></span>
+				{% block content %}
+				{% endblock %}
+				<div class="show-for-medium" style="position: fixed; left: inherit; top: inherit; left: 1em; bottom: 3em;">
+					<div class="contacts__contact-container">
+						<div class="pop-icon-container">
+							<a href="/" class="pop-link">
+								<span class="pop-icon pop-icon_home"></span>
+								<span class="contact-icon-text"></span>
+							</a>
+						</div>
+					</div>
+					<div class="contacts__contact-container">
+						<div class="pop-icon-container">
+							<a href="#totop" class="pop-link">
+								<span class="pop-icon pop-icon_totop"></span>
+								<span class="contact-icon-text"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="hide-for-medium" style="position: fixed; left: 0; right: 0; bottom: 0; height : 2.0em;">
+				    <div style="position: inherit; width: 100%;">
+					<div style="width: 50%; height: 2.0em; padding : 0.25em 0 0.25em 0; display: inline; float: left; background-color: #9e9e9e; opacity: 0.7;">
+					    <a href="/" class="pop-link" style="margin-left: 45%;">
+						<span class="pop-icon pop-icon_home"></span>
+						<span class="contact-icon-text"></span>
+					    </a>
+					</div>
+					<div style="width: 50%;  height: 2.0em; padding : 0.25em 0 0.25em 0; display: inline; float: left; background-color: #6e6e6e; opacity: 0.7;">
+					    <a href="#totop" class="pop-link" style="margin-left: 45%;">
+						<span class="pop-icon pop-icon_totop"></span>
+						<span class="contact-icon-text"></span>
+					    </a>
+					</div>
+				    </div>
+				</div>
+			</div>
+			<div class="page__footer-line page__footer-line_background">
+				<div class="row">
+					<div class="small-12 column">
+						<p class="copyright-text">©&nbsp;<a href="http://foto-ruban.ru" class="copyright-link">FotoRuban</a>&nbsp;все права защищены</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 column">
+						<div class="confidential">
+							<a href="/confidentials/" class="confidential-link">Заявление о конфендициальности</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).foundation();
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var _jsDropdownMenu = function(trigger_name, target_name){
+			var js_dropdown = document.querySelector(target_name);
+			var trigger = document.querySelector('.'+trigger_name);
+			trigger.addEventListener('click', function(evnt){
+				evnt.preventDefault();
+				if(js_dropdown.style.display == ""){
+					js_dropdown.style.display = "block";
+				}
+				else if(js_dropdown.style.display == "none"){
+					js_dropdown.style.display = "block";
+				}
+				else if(js_dropdown.style.display == "block"){
+					js_dropdown.style.display = "none";
+				}
+			}, false);
+		};
+		_jsDropdownMenu('js-dropdown-trigger', '.js-dropdown-menu');
+		_jsDropdownMenu('js-dropdown-two', '.js-dropdown-menu-two');
+	})
+</script>
+<script type="text/javascript">
+	$(window).resize(function(){
+		$('.js-dropdown-menu').css('display', 'none');
+		$('.js-dropdown-menu-two').css('display', 'none');
+	});
+</script>
+{% block bottom-scripts %}{% endblock %}
 </body>
 </html>
