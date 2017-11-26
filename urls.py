@@ -7,7 +7,8 @@ from django.conf import settings
 
 urlpatterns = patterns('',
                        url(r'^$', 'new_foto_app.views.index', name='index'),
-                       url(r'^portfolio/(?P<razdel>[a-zA-Z\d]+)/$', 'new_foto_app.views.portfolio', name='portfolio'),
+                       url(r'^portfolio/$', 'new_foto_app.views.portfolio', name='portfolio'),
+                       url(r'^video/$', 'new_foto_app.views.portfolio_videos', name='videos'),
                        url(r'^articles/$', 'new_foto_app.views.articles', name='articles-view'),
                        url(r'^articles/(?P<articles>[a-zA-Z\-]+)/$', 'new_foto_app.views.articles', name="article-concrete-view"),
                        url(r'^blog/$', 'new_foto_app.views.blog', name='blog-list-view'),
