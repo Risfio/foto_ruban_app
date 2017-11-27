@@ -82,6 +82,7 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='media/', default="images/temporary-anavailable.png")
     date = models.DateField(auto_now=False)
     text = models.TextField(max_length=2000)
+    #index = models.PositiveIntegerField(default=1)
 
     def get_absolute_url(self):
         return str(self.date)
