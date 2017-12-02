@@ -163,8 +163,10 @@ def blog(request):
     for post in posts:
         post.url = post.get_absolute_url()
     return render(request, "blog.html", 
-                  {'posts': sorted(posts, key=lambda x: x.index),
-                   'paginator': [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, page)} for num in range(1, paginator.num_pages + 1)]
+                  {
+                    # 'posts': sorted(posts, key=lambda x: x.index),
+                    'posts': posts,
+                    'paginator': [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, page)} for num in range(1, paginator.num_pages + 1)]
           })
 
 
