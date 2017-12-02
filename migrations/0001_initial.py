@@ -51,6 +51,7 @@ class Migration(migrations.Migration):
             name='Portfolio',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('razdel', models.PositiveIntegerField(null=True, verbose_name='\u041d\u043e\u043c\u0435\u0440 \u0440\u0430\u0437\u0434\u0435\u043b\u0430', choices=[(1, b'lovestory'), (2, b'svadbi'), (3, b'portreit'), (4, b'semeynie'), (5, b'video')])),
                 ('image', models.ImageField(upload_to=b'media/', null=True, verbose_name='\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435', blank=True)),
                 ('outer_image', models.CharField(max_length=1024, verbose_name='\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435, \u0435\u0441\u043b\u0438 \u043a\u0430\u0440\u0442\u0438\u043d\u043a\u0430 \u043d\u0430                                                                              \u0432\u043d\u0435\u0448\u043d\u0435\u043c \u0440\u0435\u0441\u0443\u0440\u0441\u0435 - \u0442\u0438\u043f\u0430 \u044f\u043d\u0434\u0435\u043a\u0441 \u0444\u043e\u0442\u043a\u0438', blank=True)),
                 ('alternateName', models.CharField(max_length=256, verbose_name='\u0421\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u0435 \u0442\u0435\u0433\u0430 \u0430\u043b\u044c\u0442! \u041d\u0430\u0434\u043e \u043f\u043e\u043c\u0435\u043d\u044f\u0442\u044c \u043d\u0430 schema.org \u0430\u0442\u0442\u0440\u0438\u0431\u0443\u0442')),
