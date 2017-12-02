@@ -22,8 +22,9 @@ class BlogImageInline(admin.TabularInline):
 
 
 class BlogAdmin(admin.ModelAdmin):
-    fields = ('caption', 'image', 'date', 'text')
+    fields = ('caption', 'image', 'date', 'text', 'index')
     inlines = [BlogImageInline]
+    list_display = ('index', 'caption')
 
 
 
