@@ -32,7 +32,7 @@ class PortfolioVideoAdmin(admin.ModelAdmin):
 
 
 class PortfolioAdmin(admin.ModelAdmin):
-    list_display = ('id', 'alternateName', 'index', 'razdel')
+    list_display = ('id', 'alternateName', 'index')
 
 
 admin.site.register(Blog, BlogAdmin)

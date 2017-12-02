@@ -18,7 +18,7 @@ portfolio_choices = [
 ]
 
 class Portfolio(models.Model):
-    razdel = models.PositiveIntegerField(null=False, choices=portfolio_choices, verbose_name=u'Номер раздела')
+    razdel = models.PositiveIntegerField(null=True, choices=portfolio_choices, verbose_name=u'Номер раздела')
     image = models.ImageField(upload_to='media/', verbose_name=u'Изображение', blank=True, null=True)
     outer_image = models.CharField(max_length=1024, blank=True, verbose_name=u'Ссылка на изображение, если картинка на \
                                                                              внешнем ресурсе - типа яндекс фотки')
@@ -30,7 +30,7 @@ class Portfolio(models.Model):
         return str(self.id)
 
     def get_absolute_url(self):
-        return '/portfolio/%s/%i' % (self.razdel, self.id)
+        return '/portfolio/%i' % (self.id)
 
 class PortfolioVideo(Portfolio):
     # video field contains just iframe code from youtube
@@ -82,6 +82,7 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='media/', default="images/temporary-anavailable.png")
     date = models.DateField(auto_now=False)
     text = models.TextField(max_length=2000)
+    #index = models.PositiveIntegerField(default=1)
 
     def get_absolute_url(self):
         return str(self.date)

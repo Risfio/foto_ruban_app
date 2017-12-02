@@ -36,58 +36,58 @@ def get_page(get_query, num_per_page, tottal):
     return items, paginator.page_range
 
 
-def portfolio(request, razdel):
-    template_file = 'portfolio.html'
-    # set page title
-    title_choices = (
-        ('portreit', u'портретная съемка'),
-        ('lovestory', u'лавстори'),
-        ('semeynie', u'семейная фотография'),
-        ('svadbi', u'свадьбы'),
-    ('video', u'Видео'),
-    )
-    keywords_choices = (
-    ('portreit', u'Портретная фотография.Лучшие фотопортреты'),
-    ('lovestory', u'Love Story.Лавстори.Фотографии прогулок влюбленных пар.'),
-    ('semeynie', u'Семейные фотографии.Фотосессии семейных торжеств, фото семейных мероприятий, семейная фотосессия.'),
-    ('svadbi', u'Свадебные фотографии.Фото со свадеб.Серии фото свадебных мероприятий.'),
-    ('video', u'Видео свадебные фотосессии, постановочное фото,видео о работе фотографа.'),
-    )
-    description_choices = (
-    ('portreit', u'Галлерея портретной фотографии'),
-    ('lovestory', u'Фотосессия в стиле Лавстори LoveStory'),
-    ('semeynie', u'Семейные фотосессии с професиональным фотографом'),
-    ('svadbi', u'Профессиональная свадебная съемка.'),
-    ('video', u'Видео о работе фотографа и видеослайдшоу.'),
-    )
-
-    def get_title(input, choices):
-        return [rus for en, rus in choices if en == input][0] or None
-
-    # end debug
-    items = []
-    # if url not endthwith '?page=' - set page to 1
-    page = request.GET.get('page') or 1
-    pages = []
-    get_active = lambda x, current: x == current and True or False
-    if not razdel is None:
-        for razdel_id, razdel_name in portfolio_choices:
-            if razdel_name == razdel:
-                if razdel == 'video':
-                    template_file = 'portfolio_video.html'
-                    items, num_pages = get_page(request.GET, 10, PortfolioVideo.objects.filter(razdel=razdel_id))
-                elif razdel != 'video':
-                    items, num_pages = get_page(request.GET, 10, Portfolio.objects.filter(razdel=razdel_id))
-                    pages = [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, int(page))} for num in num_pages]
-    elif razdel is None:
-        items, num_pages = get_page(request.GET, 2, Portfolio.objects.filter(razdel=1))
-        pages = [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, 1)} for num in num_pages]
-    #return render(request, template_file, {'items': items,
-    return render(request, template_file, {'items': sorted(items, key=lambda x: x.index),
-                          'keywords': get_title(razdel, keywords_choices),
-                          'description': get_title(razdel, description_choices),
-                                              'paginator': pages,
-                                              'title': get_title(razdel, title_choices)})
+# def portfolio(request, razdel):
+#     template_file = 'portfolio.html'
+#     # set page title
+#     title_choices = (
+#         ('portreit', u'портретная съемка'),
+#         ('lovestory', u'лавстори'),
+#         ('semeynie', u'семейная фотография'),
+#         ('svadbi', u'свадьбы'),
+#     ('video', u'Видео'),
+#     )
+#     keywords_choices = (
+#     ('portreit', u'Портретная фотография.Лучшие фотопортреты'),
+#     ('lovestory', u'Love Story.Лавстори.Фотографии прогулок влюбленных пар.'),
+#     ('semeynie', u'Семейные фотографии.Фотосессии семейных торжеств, фото семейных мероприятий, семейная фотосессия.'),
+#     ('svadbi', u'Свадебные фотографии.Фото со свадеб.Серии фото свадебных мероприятий.'),
+#     ('video', u'Видео свадебные фотосессии, постановочное фото,видео о работе фотографа.'),
+#     )
+#     description_choices = (
+#     ('portreit', u'Галлерея портретной фотографии'),
+#     ('lovestory', u'Фотосессия в стиле Лавстори LoveStory'),
+#     ('semeynie', u'Семейные фотосессии с професиональным фотографом'),
+#     ('svadbi', u'Профессиональная свадебная съемка.'),
+#     ('video', u'Видео о работе фотографа и видеослайдшоу.'),
+#     )
+#
+#     def get_title(input, choices):
+#         return [rus for en, rus in choices if en == input][0] or None
+#
+#     # end debug
+#     items = []
+#     # if url not endthwith '?page=' - set page to 1
+#     page = request.GET.get('page') or 1
+#     pages = []
+#     get_active = lambda x, current: x == current and True or False
+#     if not razdel is None:
+#         for razdel_id, razdel_name in portfolio_choices:
+#             if razdel_name == razdel:
+#                 if razdel == 'video':
+#                     template_file = 'portfolio_video.html'
+#                     items, num_pages = get_page(request.GET, 10, PortfolioVideo.objects.filter(razdel=razdel_id))
+#                 elif razdel != 'video':
+#                     items, num_pages = get_page(request.GET, 10, Portfolio.objects.filter(razdel=razdel_id))
+#                     pages = [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, int(page))} for num in num_pages]
+#     elif razdel is None:
+#         items, num_pages = get_page(request.GET, 2, Portfolio.objects.filter(razdel=1))
+#         pages = [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, 1)} for num in num_pages]
+#     #return render(request, template_file, {'items': items,
+#     return render(request, template_file, {'items': sorted(items, key=lambda x: x.index),
+#                           'keywords': get_title(razdel, keywords_choices),
+#                           'description': get_title(razdel, description_choices),
+#                                               'paginator': pages,
+#                                               'title': get_title(razdel, title_choices)})
 
 
 def articles(request, articles=None):
@@ -111,12 +111,54 @@ def articles(request, articles=None):
         'title': title,})
 
 
+def portfolio_videos(request):
+    get_active = lambda x, current: x == current and True or False
+    page = 1
+    if not request.GET.get('page') is None:
+        page = int(request.GET.get('page'))
+    paginator = Paginator(PortfolioVideo.objects.all(), 30)
+    # Abowe to prevent out of pages range error
+    if page > paginator.num_pages:
+        page = paginator.num_pages
+
+    posts = paginator.page(page)
+    for post in posts:
+        post.url = post.get_absolute_url()
+    return render(request, "portfolio_video.html",
+                  {'items': sorted(posts, key=lambda x: x.index),
+                   'paginator': [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, page)} for num in range(1, paginator.num_pages+1)]
+          })
+
+
+def portfolio(request):
+    get_active = lambda x, current: x == current and True or False
+    page = 1
+    if not request.GET.get('page') is None:
+        page = int(request.GET.get('page'))
+    paginator = Paginator(Portfolio.objects.all(), 30)
+    # Abowe to prevent out of pages range error
+    if page > paginator.num_pages:
+        page = paginator.num_pages
+
+    posts = paginator.page(page)
+    for post in posts:
+        post.url = post.get_absolute_url()
+    return render(request, "portfolio.html",
+                  {'items': sorted(posts, key=lambda x: x.index),
+                   'paginator': [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, page)} for num in range(1, paginator.num_pages+1)]
+          })
+
+
 def blog(request):
     get_active = lambda x, current: x == current and True or False
     page = 1
     if not request.GET.get('page') is None:
         page = int(request.GET.get('page'))
     paginator = Paginator(Blog.objects.all(), 10)
+    # Abowe to prevent out of pages range error
+    if page > paginator.num_pages:
+        page = paginator.num_pages
+
     posts = paginator.page(page)
     for post in posts:
         post.url = post.get_absolute_url()
