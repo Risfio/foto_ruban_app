@@ -1,5 +1,6 @@
 # Python compiled files
 
+migrations/
 node_modules/
 bower_components/
 *.py[cod]
