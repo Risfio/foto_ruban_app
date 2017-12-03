@@ -34,6 +34,7 @@ class Migration(migrations.Migration):
                 ('image', models.ImageField(default=b'images/temporary-anavailable.png', upload_to=b'media/')),
                 ('date', models.DateField()),
                 ('text', models.TextField(max_length=2000)),
+                ('index', models.PositiveIntegerField(default=1)),
             ],
             options={
                 'ordering': ['-date'],
