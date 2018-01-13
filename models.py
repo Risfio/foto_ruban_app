@@ -43,10 +43,10 @@ def fix_youtube_link(sender, instance, *args, **kwargs):
     pat = re.compile(r'.*src=?((\").+(\"))')
     parts = []
     for part in instance.video.split(' '):
-	result = re.match(pat, part)
-	if not result is None:
-	    part = part[:-1] + u'?wmode=opaque"'
-	parts.append(part)
+        result = re.match(pat, part)
+        if not result is None:
+            part = part[:-1] + u'?wmode=opaque"'
+        parts.append(part)
     instance.video = ' '.join(parts)
     return instance.video
 

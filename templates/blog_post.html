@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ post.caption }} {{ post.date }}{% endblock %}
+{% block title %}{{ post.caption }}{% endblock %}
 {% block more_css %}
 {% endblock %}
 {% block content %}
@@ -9,7 +9,6 @@
             <div class="card card_padding">
                 <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small">
                     <p class="card__text">{{ post.caption }}</p>
-                    <p class="card-thumbnail__date card-thumbnail__date_padding card-thumbnail__date_margin">{{ post.date }}</p>
                     <p class="card__text">{{ post.text|safe }}</p>
                 </div>
             </div>
