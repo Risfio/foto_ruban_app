@@ -130,6 +130,19 @@ def portfolio_videos(request):
           })
 
 
+# helper function for split array to multiple
+def _make_columns(src, num):
+    dst = []
+    col_num = 0
+    for i in range(0, num):
+	dst.append([])
+    for i in xrange(0, len(src)):
+	if col_num >= num:
+	    col_num = 0
+        dst[col_num].append(src[i])
+        col_num += 1
+    return dst
+
 def portfolio(request):
     get_active = lambda x, current: x == current and True or False
     page = 1
@@ -144,7 +157,7 @@ def portfolio(request):
     for post in posts:
         post.url = post.get_absolute_url()
     return render(request, "portfolio.html",
-                  {'items': sorted(posts, key=lambda x: x.index),
+                  {'items': _make_columns(sorted(posts, key=lambda x: x.index),2),
                    'paginator': [{'url': '?page=' + str(num), 'text': num, 'active': get_active(num, page)} for num in range(1, paginator.num_pages+1)]
           })
 

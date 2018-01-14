@@ -5,8 +5,11 @@
 {% block more_css %}
 {% endblock %}
 {% block content %}
-	{% for item in items %}
 	<div class="row align-center small-collapse">
+	{% for col in items %}
+	<div class="small-12 medium-6 columns">
+	{% for item in col %}
+        <div class="row align-center small-collapse">
 	    <div class="small-12 columns">
 	        <div class="media-object">
 	            <div class="card card_padding">
@@ -28,5 +31,8 @@
 	    </div>
 	</div>
 	{% endfor %}
+        </div>
+	{% endfor %}
+        </div>
 	{% include "paginator_block.html" %}
 {% endblock %}
