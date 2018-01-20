@@ -169,7 +169,11 @@ line-height: 0;
   margin: 1rem auto;
 }
 .card__thumbnail_stack-for-small {
-  max-width: 90%;
+  max-width: 45.5%;
+}
+
+.portfolio__card_thumbnail_stack-for-small {
+    max-width: 100%;
 }
 
 .contacts-page__contact-icon {
