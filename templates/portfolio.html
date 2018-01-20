@@ -5,28 +5,38 @@
 {% block more_css %}
 {% endblock %}
 {% block content %}
-	{% for item in items %}
 	<div class="row align-center small-collapse">
-	    <div class="small-12 columns">
-	        <div class="media-object">
-	            <div class="card card_padding">
-	            	{% if item.outer_image %}
-	                <a href="{{ item.outer_image }}" class="card_link">
-	                    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small card__thumbnail_animation">
-	                        <img src="{{ item.outer_image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
-	                    </div>
-	                </a>
-	                {% else %}
-	                <a href="{{ item.image }}" class="card_link">
-	                    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small card__thumbnail_animation">
-	                        <img src="{{ item.image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
-	                    </div>
-	                </a>
-	                {% endif %}
-	            </div>
-	        </div>
+	    <div class="small-12 medium-8 medium-push-2 columns">
+		<div class="row align-center small-collapse">
+		{% for col in items %}
+		    <div class="small-12 medium-6 columns">
+		    {% for item in col %}
+			<div class="row align-center small-collapse">
+			    <div class="small-12 columns">
+				<div class="media-object">
+				    <div class="card card_padding">
+				    {% if item.outer_image %}
+					<a href="{{ item.outer_image }}" class="card_link">
+					    <div class="card__thumbnail card__thumbnail_margin portfolio__card_thumbnail_stack-for-small  card__thumbnail_animation">
+						<img src="{{ item.outer_image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
+					    </div>
+					</a>
+				    {% else %}
+					<a href="{{ item.image }}" class="card_link">
+					    <div class="card__thumbnail card__thumbnail_margin card__thumbnail_stack-for-small card__thumbnail_animation">
+						<img src="{{ item.image }}" class="card-thumbnail__image" alt="{{ item.alternateName }}"/>
+					    </div>
+					</a>
+				    {% endif %}
+				    </div>
+				</div>
+			    </div>
+			</div>
+		    {% endfor %}
+		    </div>
+		{% endfor %}
+		</div>
 	    </div>
-	</div>
-	{% endfor %}
+        </div>
 	{% include "paginator_block.html" %}
 {% endblock %}

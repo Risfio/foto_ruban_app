@@ -151,7 +151,7 @@ line-height: 0;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
 }
 
-.card__thumbnail_margin {
+.card__thumbnail_margin-bottom {
   margin-bottom: 1rem;
 }
 
@@ -170,6 +170,10 @@ line-height: 0;
 }
 .card__thumbnail_stack-for-small {
   max-width: 45.5%;
+}
+
+.portfolio__card_thumbnail_stack-for-small {
+    max-width: 100%;
 }
 
 .contacts-page__contact-icon {
