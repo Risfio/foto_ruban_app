@@ -176,6 +176,10 @@ line-height: 0;
     max-width: 100%;
 }
 
+.portfolio__card-thumbnail_margin {
+   margin: 0 auto;
+} 
+
 .contacts-page__contact-icon {
   display: inline;
   float: left;
