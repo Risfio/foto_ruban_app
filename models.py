@@ -106,6 +106,10 @@ class BlogImage(models.Model):
 class BlogImageUpdated(BlogImage):
 	fotki = models.CharField(max_length=512, blank=True, null=True)
 
+class StaticImage(models.Model):
+    name = models.CharField(max_length=128)
+    img = models.ImageField(upload_to='media/', default="images/temporary-anavailable.png")
+
 
 # end of testings
 class TestNewFotoApp(models.Model):
