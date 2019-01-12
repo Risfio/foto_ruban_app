@@ -8,6 +8,7 @@ from .models import Blog
 from .models import BlogImage
 from .models import BlogImageUpdated
 from .models import PortfolioVideo
+from .models import StaticImage
 
 # Register your models here.
 
@@ -36,10 +37,15 @@ class PortfolioAdmin(admin.ModelAdmin):
     list_display = ('id', 'alternateName', 'index')
 
 
+class StaticImageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+
+
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Portfolio, PortfolioAdmin)
 admin.site.register(Articles)
 admin.site.register(PortfolioVideo, PortfolioVideoAdmin)
+admin.site.register(StaticImage, StaticImageAdmin)
 
 # Addin yandex fotki link
 admin.site.register(BlogImageUpdated, BlogImageUpdAdmin)
